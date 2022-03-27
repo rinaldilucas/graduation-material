@@ -1,0 +1,49 @@
+comandos create database, use table, create table:
+
+exemplo:
+create database nomeBD;
+use nomeBD;
+
+create table nomeTable
+	(id int not null[nome = id, int = tipo, not null = caracteristica],
+	 nome varchar(50) not null,
+	 area varchar(100) [se não colocar a caracteristica significa que pode ser vazio],
+	 precoHora float(2)
+	); 
+
+exemplo2:
+
+create table advogado (
+
+id int not null,
+nome varchar(50) not null,
+area varchar(100),
+precoHora float(2),
+primary key(id),
+);
+
+exemplo3:
+
+create table advogado (
+
+id int not null,
+nome varchar(50) not null unique,
+cidade varchar(12) default 'Corn PRoc',
+...,
+);
+
+
+comando alter table:
+
+advogado: cod, nome, ..., preco
+cliente: id, nomme, ..., sexo
+cli_advogado: (codAdvFK, idClienteFK)PK
+
+alter table advogado add primary key(cod);
+alter table cliente add primary key(id);
+
+alter table cli_advogado add primary key (codAdvFK, idCliFK);
+*****
+
+alter table cli_advogado add foreing key (codAdvFK) references advogado(codigo);
+alter table cli_advogado add foreing key (idCliFK) references advogado(id);

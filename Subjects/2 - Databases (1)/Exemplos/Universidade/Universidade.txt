@@ -1,0 +1,31 @@
+Universidade:
+
+Entidades
+
+Aluno:
+NumeroPK, Nome, Telefone, Endereço
+
+
+Matrícula:
+Num_Matrícula, Data, Período
+
+
+Disciplina:
+CódigoPK, Carga_Hora, Nome
+
+
+Professor:
+Nome_ProfPK, Salário, Titulação
+
+ 
+
+Relacionamento Aluno 1 ----<>---- N Matrícula
+Disciplina: Num_MatriculaPK, Numero_AlunoFK, Data, Período
+
+
+Relacionamento Matricula 1 ----<>---- N Disciplina
+Disciplina: CodigoPL, Nome, Carga_Hora, Num_MatriculaFK
+
+
+Relacionamento Disciplina N ----<>---- N Professor
+Professor: (CodigomatriculaFK, Nome_Prof)PK, Salario, Titulação

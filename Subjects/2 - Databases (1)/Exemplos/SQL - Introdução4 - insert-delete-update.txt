@@ -1,0 +1,92 @@
+DML - Lgg. Manipulação de Dados
+
+-> Insert - Inserção de dados
+
+insert into NomeTabela
+(col1, col2, ...,colN)
+values
+("colunas do tipo varchar","12" , ..., "09-12-2013");
+
+
+## se usar o inser sem expecificar as colunas, tem que se passar valores para todas ##
+## caso não passe vai dar erro. se uma coluna puder receber null pode-se usar null. ##
+
+insert into NomeTabela
+values
+("1", "tamires", "tamires@gmail.com", null[se ela puder receber null]);
+
+
+-> Delete - remoção de dados
+
+delete from NomeTabela
+where coluna = "valor"
+
+delete from nomeTabela
+where coluna = "valor" or
+coluna = "valor2"
+
+//like = operador que permite fazer buscar com caracteres coringa
+% = qualquer coisa
+_ = sobstitui um caractere qualquer. ex busca palavra com acento ou sem acento
+
+delete from nomeTabela
+where coluna like "val_%";
+
+delete from nomeTabela
+where coluna like "% j_unior";
+
+
+
+//remove todas as linhas da tabela emprestimo
+delete from esprestimo
+
+//apaga da tabela conta todos os registros que sejam igual a paulo jose
+delete from conta
+where nome_cliente='Paulo José'
+
+delete from emprestimo
+where total between 1000 and 2000
+
+delete from aluno
+nome in ("1 nome", "2 nome", "3 nome");
+
+delete from nomeTabela
+where coluna in ("valor1", "valor2");
+
+delete from nometabela
+where coluna = "valor1" or
+coluna = "valor2";
+
+delete from nomeTabela
+where coluna between 10 abd 100
+
+delete from nomeTabela
+where coluna >= 10 and coluna <= 100
+
+delete from nomeTabela
+where (coluna >= 10 and coluna <= 100) or
+(coluna >= 200 and coluna <= 100)
+
+delete from nomeTabela
+where coluna between 10 abd 100
+or colune between 200 and 300
+
+
+-> Update - atualização de dados
+
+update nomeTabela
+set
+coluna1 = "novoValor"
+coluna2 = "novoValor2"
+where colunax = "valor" or
+colunay = "valor2"
+
+
+
+
+*****
+
+select - seleção de dados
+
+
+	

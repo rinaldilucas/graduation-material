@@ -1,0 +1,99 @@
+Public Class ClassIMC
+    Private pPeso As Double
+    Private pAltura As Double
+    Private pIdade As Integer
+    Private pSexo As String
+    Private pImc As Double
+
+    Sub New()
+        pPeso = 0
+        pIdade = 0
+        pAltura = 0
+        pSexo = ""
+    End Sub
+
+    Sub New(ByVal peso As Double, ByVal altura As Double, ByVal idade As Integer, ByVal sexo As String)
+        pPeso = peso
+        pIdade = idade
+        pSexo = sexo
+        pAltura = altura
+    End Sub
+
+    Property peso As Double
+        Get
+            Return pPeso
+        End Get
+        Set(ByVal value As Double)
+            pPeso = value
+        End Set
+    End Property
+
+    Property idade As Integer
+        Get
+            Return pIdade
+        End Get
+        Set(ByVal value As Integer)
+            pIdade = value
+        End Set
+    End Property
+
+    Property Sexo As String
+        Get
+            Return pSexo
+        End Get
+        Set(ByVal value As String)
+            pSexo = value
+        End Set
+    End Property
+
+    Property altura As Double
+        Get
+            Return pAltura
+        End Get
+        Set(ByVal value As Double)
+            pAltura = value
+        End Set
+    End Property
+
+    Property imc As Double
+        Get
+            Return pImc
+        End Get
+        Set(ByVal value As Double)
+            pImc = imc
+        End Set
+    End Property
+
+    Public Sub calcular()
+        IMC = pPeso / (pAltura * pAltura)
+        If pIdade < 19 Then
+            imc = imc * 0.85
+        ElseIf pIdade > 60 Then
+            imc = imc * 1.15
+        End If
+        pImc = imc
+    End Sub
+
+    Public Function avaliar() As String
+        If pSexo = "M" Then
+            If pImc < 17 Then
+                Return "Bom."
+            ElseIf pImc < 25 Then
+                Return "Médio."
+            Else
+                Return "Ruim."
+            End If
+        ElseIf pSexo = "F" Then
+            If pImc < 16 Then
+                Return "Bom."
+            ElseIf pImc < 24 Then
+                Return "Médio."
+            Else
+                Return "Ruim."
+            End If
+        Else
+            Return "Inválido"
+        End If
+    End Function
+
+End Class

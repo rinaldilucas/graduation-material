@@ -1,0 +1,114 @@
+REVISAO ARQUITETURA DE SOFTWARE
+
+
+• Descreva dois problemas comuns em POO:
+R: Como é baseada em objetos, possui um conceito mais dificil / O processamento é muito maior que o da programação estruturada
+
+• Descreva com suas palavras para que serve a herança em POO.
+R: A herança faz com que a classe herde todos os atributos e métodos da superclasse, fazendo com que a mesma não precise ser programada novamente. Se precisar mudar algum método ou atributo, é necessário apenas implementá-lo/seta-lo e e será substituido.
+
+• Qual a vantagem do uso de uma Interface?
+R: Ela deixa bem definida as "regras de negócio" da aplicação. A interface separa o "contrato" da implementação, todos métodos que estiverem na interface deverão ser implementados pela classe que usará o Implements. Uma classe pode implementar várias interfaces, diferentemente de herdar da superclasse (que só herda uma).
+
+• Qual a diferença entre Interface e Abstract?
+Os métodos da Interface só possuem assinatura (não possuem implementação), funcionam como um tipo de contrato, onde são especificados os atributos e métodos que as classes que forem implementar a Interface terão que implementar.
+A classe abstrata é um tipo de classe que não pode ser instanciada. É usada para ser herdada, funciona como uma superclasse. Devem conter pelo menos um método abstrato que não tem corpo.
+
+• Explique a diferença entre os padrões Cliente-Servidor e Camadas.
+A arquitetura em camadas consiste em dividir o servidor de maneira hierarquica, de forma que cada camada forneça um serviço para a camada superior e utilize um serviço da camada inferior. Os componentes são as camadas e os conectores protocolos. 
+A arquitetura cliente servidor trabalha diretamente entre o cliente e o server. Geralmente se comunicam pela rede (HTTP). Servidores fornecem serviços e clientes consomem esses serviços. É distribuido, separa as responsabilidades. Possui uma dependencia de comunicação, e faz com que o servidor tenha uma implementação muito acoplada.
+
+Qual a diferença entre REST e SOAP APIs?
+O SOAP tem como objetivo estabelecer um protocolo para comunicação de objetos e serviços;
+O REST usa dos verbos HTTP (get, post, delete, put, head) para criar serviços que possam ser usados por qualquer tipo de sistema.
+
+• Quais as vantagens de uma API REST?
+Qualquer sistema pode usar seus serviços.
+
+• O que significa a chamada: DELETE api.site.com/clientes/5?
+Deleta o cliente id 5.
+
+• Qual a vantagem do uso de Padrões de Projeto?
+O reuso das soluções propostas para determinado problema. É possível encaixar esses padrões para determinados projetos, facilitando e melhorando seu desempenho, pois foi fruto de vários testes anteriormente antes de se tornar um padrão de projeto. Para cada problema específioc, seja ele na criação, estruturação ou comportamento.
+
+• Como os padrões são classificados?
+São classificado em 3 tipos:
+Criação: se preocupa com a criação dos objetos.
+Estrutural: se preocupa com a composição das classes ou dos objetos relacionados.
+Comportamental: descreve maneiras de como as classes e objetos interagem entre si e distribuem responsabilidade.
+
+• Cite casos reais do uso do padrão Abstract Factory.
+No caso de duas empresas, as 2 possuem 2 tipos de veiculos, um sedan e outro popular. Ao inves de agrupar pela marca, o qual dificultaria depois descobrir qual o tipo do carro, é agrupado pelo tipo, fazendo 2 fabricas: uma de sedan e outra de popular.
+
+• Quais os participantes de um padrão Abstract Factory?
+Cliente, abstract factory, concretefactory, produto, abstract product.
+
+Diferencie o padrão Abstract Factory do Factory Method:
+-O Factory Method define um método de construção. Geralmente é a subclasse que irá instanciar o método.
+-O factory method é apenas um método e por isso, pode ser sobrescrito em uma subclasse dependendo da subclasse para sua funcionalidade.
+- O factory method permite delegar a instanciação para as subclasses.
+
+-O Abstract Factory é um objeto que pode possuir múltiplas factorys methods nele. É uma fábrica de fábricas. Providencia fábricas para as subclasses que usam os métodos da melhor forma. Se você providenciar uma fábrica diferente, você recebe um objeto diferente.
+-Este padrão permite a criação de famílias de objetos relacionados ou dependentes por meio de uma única interface e sem que a classe concreta seja especificada.
+
+Explique uma desvantagem do Factory Method:
+Faz com que seja necessário a criação de subclasses da classe Creator para implementar seus métodos.
+
+Para que serve o padrão Builder?
+O padrão builder serve para separar a construção de objetos complexos. Define os métodos abstratos para que as subclasses a implementem.
+
+É possível usar o padrão Builder e Factory Method juntos?
+Sim. Cada padrão de criação pode ser usado para determinado objetivo específico.
+
+
+	Qual a intenção de uso do Padrão Singleton?
+Garantir que uma classe tenha somente uma instancia e fornecera apenas um ponto global apra acessar a mesma.
+
+	• Qual a estrutura de um Singleton?
+Uma unica classe com um construtor privado para que outras classes nao a instanciem, e um método para chamar a instancia que verifica se há ou não uma instancia existente, se nao houver, a cria e retorna.
+
+	• Quais as vantagens do Padrão Singleton?
+Centralizar e unificar o acesso a instancias. Em concorrencia é comum utilizar recursos compartilhados, encapsular esse recurso que é compartilhado torna muito mais fácil a sincronização do acesso.
+
+	----Exercicio Aula 14
+
+Qual o objetivo do padrão adapter ?
+R: O padrão adapter tem o objetivo converter uma interface de uma classe externa em outra interface esperada pelos cliente. Permitindo que classes com interfaces imcompatíveis trabalhem em conjunto.
+
+Descreva uma situação em que o Adapter pode ser utilizado:
+R: O padrão adapter pode ser utilizado no cenário em que usuário quer utilizar uma classe existente sem que sua interface corresponda à interface que o mesmo necessita utilizar. Ou, caso, seja impraticável adaptar essas interfaces criando subclasses para cada uma. 
+
+Qual o objetivo do padrão Decorator?
+Busca permitir a adição de um comportamento adicional a um objeto de maneira dinâmica, ou seja, em tempo de execução.
+
+• Descreva uma situação onde o Decorator pode ser usado.
+
+• É possível implementar o Decorator via Abstract Class?
+
+
+--
+
+
+
+Qual o objetivo do padrão Observer?
+R: Tem como objetivo definir uma dependência de um-para-muitos entre objetos, de maneira que quando um objeto muda de estado
+todos os seus dependentes são notificados e atualizados automaticamente.
+
+Descreva outra situação onde o Observer pode ser usado.
+R: Pode ser usado em sistemas de notificações push, também pode ser usado em sistemas de assinaturas de revistas por exemplo, onde uma editora publica as edições e pessoas que assinam os jornais ou revistas dessa editora recebem as novas edições (notificações) assim que elas são publicadas.
+
+Pesquise sobre os serviços discutidos na aula: publish subscribe, message queue e web hooks.
+R:
+publish subscribe: publish subscribe é um padrão de mensagem onde os mensageiros não programam o envio de mensagens, que são enviados automaticamente para os inscritos.
+message queues: são componentes da engenharia de software usados para comunicação interprocesso. É o mesmo padrão publish subscribe, enfileirando as mensagens para serem enviadas quando for necessário.
+webhooks: é uma forma de recebimento de informação quando um evento acontece. Uma forma passiva de receber informações entre dois sistemas, também conhecido como retorno de chamada ou HTTP.
+
+
+
+Qual o objetivo do padrão Chain of Responsibility?
+R:
+Esse padrão evita o acomplamento dos clientes (objetos), podendo dar a mais de um objeto a possibilidade de tratar solicitações. Eles podem ou não interagir com os objetos, também podendo dar um exception e parando se necessário, porém, somente em uma direção, no caso, o próximo.
+
+Descreva outra situação onde o Chain of Responsibility pode ser usado:
+R:
+Quando quiser emitir mensagem pra varios receptores sem explicitamente monstrar quem receber, ou também por exemplo em um banco de dados, se for necessário fazer uma view específica, poderia ser usado esse estilo para fazer a sequencia de responsabilidades e passar pelas tuplas necessárias.

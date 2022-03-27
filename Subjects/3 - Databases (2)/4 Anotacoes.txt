@@ -1,0 +1,9 @@
+create table musica (idMus int not null, descMus varchar(30), fkGen int, constraint pkMusc primarykey (idMus),
+constraint fkGenero foreign key (fkGen) references (Genero)
+
+select nomeArt, descMus, descGen
+from art, musica, genero, canta
+where   art.idArt = canta.fkArt and
+	musica.idMus = cant.fkMus and
+	genero.idGen = musica.fkGen and
+	genero.desGen = 'Gospel';

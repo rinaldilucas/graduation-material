@@ -1,0 +1,167 @@
+“Redes de Computadores é um conjunto de 
+equipamentos que são capazes de trocar 
+informações e compartilhar recursos entre si, 
+utilizando protocolos para se comunicarem e 
+interligados por meios de comunicação.”
+
+Equipamento, sistema de comunicacao e protocolos.
+
+sinal analogico -> Período: intervalo de tempo em que 
+uma função náo se repete.
+
+informação analogicas: voz, video, temp, pressao
+	discretas: morse, ascii, binario
+
+transimissao analogica: 4 tipo de frequencia
+	codificacao
+
+Vantagens
+-Como não possuem o conversor A/D possuem menor custo 
+- Sinais digitais são muito menos sensíveis a interferências ou ruídos
+- É possível transmitir mais informação através de sistemas digitais 
+do que em sistemas analógicos. (compressão e multiplexãção)
+- Podem ser enviados diretamente a computadores, que são 
+equipamentos que utilizam sistemas digitais.
+Desvantagens
+-Restrições de alcance
+
+simples: radio, tv
+semi duples: walktalk
+duples: tel
+
+lan: local area network
+	metropolitan
+	wide area
+
+verde claro, verde escuro, amarelo claro, azul esc, azul claro, amarelo escuro, vermelho claro, verm escuro
+
+modelo cliente servidor comunicacao orientada a conexao (transacao bancaria)
+
+p2p: todos sao cliente-servdior
+
+hibrido: redes nas quais soluções clientes-servidor são 
+combinadas com arquiteturas 
+descentralizadas (torrent)
+
+Tipos de comunicação
+ Unicasting (um-pra-um)
+ Multicasting (um-pra-muitos)
+ Broadcasting (um-pra-todos)
+
+barramento: Se um cabo for desconectado, toda a rede fica inoperante
+
+estrela: Nesta topologia existe um dispositivo central,
+comumente chamado de concentrador, por onde
+passa todo o tráfego da rede.  Apresenta uma maior quantidade de cabos e a falha
+do equipamento central pode provocar a
+paralisação total da rede
+
+anel: simplex p2p
+
+----------------------------------------------------------------
+
+Protocolos de Comunicação
+Funções
+–Estabelecer Ligações
+–Terminar Ligações
+–Controle de Erros
+–Controle de Ordem das Mensagens
+–Controle de Fluxo
+–Fracionamento de Mensagens grandes
+–Transmissão através do Meio Físico
+–Escolha do caminho das Mensagens
+
+Aplicação É a camada que lida com as 
+solicitações dos aplicativos 
+que requerem 
+comunicações de rede, 
+como o acesso a um banco 
+de dados ou o envio de um 
+correio eletrônico> Esta camada oferece acesso 
+direto aos aplicativos que 
+estão sendo executados em 
+computadores ligados em 
+rede
+
+Apresentação Fornece serviços que 
+vários aplicativos 
+diferentes utilizam, tais 
+como criptografia, 
+compressão ou 
+conversão de 
+caracteres (de ASCII 
+para EBCDIC da IBM)
+
+Sessão Ela trata questões de sincronismo de comunicação
+Transporte assegura que os segmentos viajarao entre os hosts sem perda
+Rede camada que lida com o datagrama
+Enlace depende da fisica, assegura o envio
+Físico 0 ou 1
+
+•Camadas dependentes da rede
+–Física, Ligação de Dados (Enlace), Rede
+–Dependem do meio físico de transmissão, da topologia da rede 
+•Camada de Interface
+–Transporte
+–Fornece uma interface independente da rede para ser usada pelas 
+camadas orientadas à aplicação.
+•Camadas orientadas à aplicação
+–Sessão, Apresentação, Aplicação
+
+roteador vai até REDE
+
+Aplicação
+Apresentação		aplicacao            mensagem
+Sessão
+–Transporte        transporte                datagrama
+redes              internet                quadro
+Enlace              acesso a rede            bit
+Físico
+
+TCP/IP
+
+Ambos têm camadas 
+• Ambos têm camadas de aplicação, embora 
+incluam serviços muito diferentes 
+• Ambos têm camadas de transporte e de 
+rede comparáveis 
+• A tecnologia de comutação de pacotes (e 
+não comutação de circuitos) é presumida 
+por ambos 
+• Os profissionais de rede precisam conhecer 
+ambos 
+
+O TCP/IP combina os aspectos das camadas de 
+apresentação e de sessão dentro da sua 
+camada de aplicação 
+• O TCP/IP combina as camadas física e de enlace 
+do OSI em uma camada 
+• O TCP/IP parece ser mais simples por ter menos 
+camadas 
+• Os protocolos TCP/IP são os padrões em torno 
+dos quais a Internet se desenvolveu, portanto o 
+modelo TCP/IP ganha credibilidade apenas por 
+causa dos seus protocolos. Ao contrário, 
+geralmente as redes não são desenvolvidas de 
+acordo com o protocolo OSI, embora o modelo 
+OSI seja usado como um guia.  
+
+
+--------------------------------------------------------------
+Os tipos mais comuns de ruído são aqueles 
+causados por: 
+• EMI( interferência eletromagnética) 
+• RFI (Interferência de Rádio Frequência) 
+
+Fontes de EMI
+o Descargas atmosféricas, 
+o Circuitos e cabos elétricos 
+o Lâmpadas fluorescentes. 
+o Relés, comutadores
+• Fontes de RFI
+o motores elétricos 
+o fonte de alimentação de alguns equipamentos
+• Contramedidas:
+o Blindagem dos cabos
+o Aterramento elétrico
+

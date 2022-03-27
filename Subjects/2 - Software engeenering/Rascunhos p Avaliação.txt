@@ -1,0 +1,560 @@
+Propriedades importantes do Software
+
+Complexidade
+	– Quanto maior, mais complexo
+	– Partes (componentes) não se repetem
+	– Software + computadores é uma das coisas 
+	  mais complexas que o homem já contruiu (se não for a mais!)
+	– Complexidade em software não aumenta linearmente
+
+Conformidade
+	– Física também é complexa (teoria unificada)
+	– Complexidade é arbitrária
+	– Software deve ser adequar (conformidade)
+	– Interfaces, instituições, clientes, regras, governos
+
+Modificabilidade
+	– Propenso (pressionado) a mudanças
+	– Outros produtos não mudam
+	– Embuti funções
+	– Software é infinitamente maleável
+	– Software está inserido em contextos mutantes (leis, usuários, comércio, etc)
+
+Invisibilidade
+	– Software é invisível e não-visualizável
+	– Não possui representação geométrica (prédios, carros, etc)
+	– Não há ainda um padrão para representação (UML)
+-----------------------------------------------------------------------------------------------
+Processo de software
+
+	– Uma metodologia para as atividades, ações 
+	  e tarefas necessárias para desenvolver
+	  software de alta qualidade.
+	– Define a abordagem adotada para a aplicação da engenharia de software
+
+– Quem faz o que     – Quando     – Como
+
+Definição ---> Construção ---> Software ---> Manutenção
+			^
+			|	
+		Atividades de Apoio
+
+Modelos
+Modelos Classicos
+
+Modelo Cascata
+
+? Modelo mais antigo
+? Amplamente conhecido
+? Baseado na engenharia tradicional
+? Sequencial e linear
+
+Representação (elementos e fluxo)
+
+Engenharia de
+Sistemas        Análise de
+	        Requisitos   Projeto
+			     Codificação   Testes
+					   Manutenção
+
+Modelo Cascata ( - )
+? Fluxo linear!
+? Requisitos no início (incerteza)
+? Cliente paciente
+
+Modelo Cascata ( + )
+? É melhor do que uma abordagem ad-hoc
+? Contribuições históricas
+	– Impôs disciplina, planejamento e gerenciamento
+	– A implementação do produto é postergada
+	até que todos os requisitos estejam definidos
+
+Prototipação
+
+? Entender melhor os requisitos
+? Definir melhor os requisitos
+? Trabalho com o conceito de protótipos
+? O cliente não sabe o que quer
+
+Prototipação
+? Representação (elementos e fluxo)
+
+		Obter Requisitos
+				   Elaborar Projeto Rápido
+Refinamento do Protótipo         Construir Protótipo
+Construção  <---- Avaliar Protótipo
+do Produto
+
+Prototipação ( - )
+? Cliente não entende o protótipo
+? Decisões ruins são tomadas para desenvolver o protótipo rapidamente
+	– Incorporado no processo!
+? Protótipo ? Produto
+
+Prototipação ( + )
+? Pode ser eficiente
+? Definindo as regras do jogo inicialmente
+? “Protótipo será usado apenas para definir os requisitos”
+
+Modelo RAD
+
+? Rapid Application Development (RAD)
+? Modelo sequencial linear
+? Ciclo de desenvolvimento extremamente curto
+? Rápido ? abordagem de construção baseada em componentes
+? Requisitos claros, projeto restrito
+? Sistemas de informação
+? Divide funções em equipes
+
+Modelo RAD
+? Representação (elementos e fluxo)  60 a 90 dias
+
+Equipe #1	Equipe #2	Equipe #2
+
+Modelagem	Modelagem	Modelagem
+do Negócio	do Negócio	do Negócio
+
+Modelagem	Modelagem	Modelagem
+dos Dados	dos Dados	dos Dados
+
+Modelagem	Modelagem	Modelagem
+do Processo	do Processo	do Processo
+
+Geração da	Geração da	Geração da
+Aplicação	Aplicação	Aplicação
+
+Teste e		Teste e		Teste e
+Modificação	Modificação	Modificação
+
+Modelo RAD ( - )
+? Recursos humanos
+? Clientes e desenvolvedores comprometidos
+? “A toque de caixa”
+? Pode não ser adequado a determinadas aplicações
+– Modular
+
+Modelo RAD ( + )
+? Efetiva com sistemas modulares
+? Equipes não precisam estar fisicamente juntas
+
+Modelo em V
+? Uma variação do cascata
+? V para “Verificação” e “Validação”
+? Preocupação com a garantia de qualidade de software
+
+? Representação (elementos e fluxo)
+
+Análise de		          Operação e
+Requisitos		          Manutenção
+     Projeto do		     Teste de
+     sistema		     Aceitação
+          Projeto do	Teste de
+	  programa	Unidade e 
+			de integração        
+               Codificação
+
+Modelo em V ( - )
+? Falsa sensação de segurança
+? Problemas do cascata
+? Limita a criatividade dos testes
+
+Modelo em V ( + )
+? É de fácil compreensão
+? Dá importância a atividades de garantia de
+qualidade de software
+
+Desenvolvimento Formal
+
+? Modelo de métodos formais
+? Especificação matemática formal do software
+? Elimina ambigüidade, incompletude e
+inconsistência (análise matemática)
+? Sistemas aviônicos e equipamentos médicos
+
+Desenvolvimento Formal
+? Representação (elementos e fluxo)
+
+Definição de --> Especificação --> Transformação --> Integração e
+requisitos	 Formal		   Formal	     Testes de
+	       					     sistema
+		      T1      T2      T3      T4
+Especificação Formal --->  R1 ---> R2 ---> R3 ---> Programa executável
+
+Desenvolvimento Formal ( - )
+? Restrito a certos domínios
+? Especializado
+? Transformações podem se complexas
+
+Desenvolvimento Formal ( + )
+? Mapeamento formal da especificação até o programa
+? Uso com sucesso em sistemas críticos (segurança, confiabilidade)
+? Model checking
+	– Verificação formal automatizada
+? Cleanroom software engineering
+	– IBM
+
+Modelos Evolutivos
+
+? Modelos de processo para
+– Requisitos mutantes
+– Entregas em períodos mais curtos
+– Software que evolui!!
+? Modelos evolutivos são iterativos
+? Possibilita a entrega de versões cada vez mais complexas
+
+Modelo Incremental
+? Combina o cascata com a prototipação
+– Cascata ? repetidas vezes
+– Prototipação ? filosofia
+? De maneira incremental
+– Descobrir requisitos
+– Entregar o produto final
+
+
+Descrição --->	       Analise ---> Projeto	   --->	Versão
+geral		Engenharia de Sistemas/Informação  <---	inicial
+				|			
+				v		   --->	Versões
+			  Codificação		   <--- intermediárias
+				|
+				v		   --->	Versão
+	                      Teste		   <---	Final
+
+Modelo Incremental
+? Versões são chamadas de incrementos
+? O incremento não é um protótipo
+	– Versão funcional e operacional
+? Versão inicial é o núcleo principal
+	– Produto essencial
+? O planejamento do próximo incremento já considera modificações (feedback do usuário)
+
+Project Calendar Time
+------------------->
+|SW	Increment#1
+|Func	Comunication -> Planning -> Modeling(analysis, design) -> Construction(code, test) -> Deployment(delivery, feedback) [Delivery of 1st increment]
+|and
+|Feat	Increment#2
+|ures	Comunication -> Planning -> Modeling(analysis, design) -> Construction(code, test) -> Deployment(delivery, feedback) [Delivery of 2nd increment]
+|
+|	Increment#N
+v	Comunication -> Planning -> Modeling(analysis, design) -> Construction(code, test) -> Deployment(delivery, feedback) [Delivery of Nth increment]
+
+Modelo Incremental ( - )
+? Priorizar as funcionalidades
+? Planejar o incremento
+	– Não pode ser muito grande
+	– Deve entregar uma funcionalidade
+? Difícil identificar facilidades básicas comum a todos os requisitos
+	– ??
+
+Modelo Incremental ( + )
+? Gerenciar riscos técnicos
+	– Iniciar com as funcionalidades mais arriscadas
+	– Planejar a disponibilidade de hardware
+? Adequado para sistemas nos quais os requisitos são difíceis de especificar em estágios iniciais
+? Começar com um equipe pequena
+? Cada incremento pode usar um processo
+
+Modelo Espiral
+? Barry Boehm
+? Natureza iterativa ? prototipação
+? Controle e sistemática ? cascata
+? É dividido em uma série de regiões
+	– Variantes com 3 a 6 regiões
+ 		            |
+ 		            |
+ Último loop	            |	Loop + interno            
+ Construção e teste         |	Possibilidades do sistema
+ do software	            |	viabilidade
+ 		            |
+ Determinação dos objetivos |	Avaliação e Redução dos Riscos
+----------------------------|-------------------------------
+		            |
+ Penúltimo Loop	            |	Próximo Loop
+ Concentra-se no       	    |	Definição dos
+ Projeto do software        |	requisitos
+		            |	
+ Planejamento	            |	Desenvolvimento E Validação
+		            |
+
+Modelo Espiral
+? As fases mostradas na figura são apenas exemplos
+? Não existem fases pré-determinadas
+? A empresa pode definir e estruturar as fases
+
+Modelo Espiral
+? Determinação dos objetivos
+	– Define objetivos para cada fase
+	– Identifica restriçõe
+	– Identifica riscos
+? Avaliação e redução de riscos
+	– Cada risco identificado é analisado indivualmente
+	– Passos são tomados para reduzir esses riscos
+
+Modelo Espiral
+? Desenvolvimento e Validação
+	– O software é construído
+	– Qualquer modelo pode ser escolhido
+? Planejamento
+	– Projeto atual é revisto
+	– Planos são desenvolvidos para o próximo loop
+
+Modelo Espiral ( - )
+? Convencer clientes de que é controlável
+? Experiência na determinação dos riscos
+	– Chave para o sucesso
+	– Esquecer um risco = problemas
+
+Modelo Espiral ( + )
+? Melhores características + análise de riscos
+	– Modelo adaptado a riscos inerentes
+? Estrutura iterativa é mais realística
+? Usa a prototipação como estratégia para reduzir riscos
+? Cada loop = + software, - riscos
+
+Processo Unificado
+
+? Princípios básicos
+	– Desenvolvimento iterativo
+	– Baseado em Casos de uso
+	– Centrado em arquitetura
+
+Processo Unificado
+? Desenvolvimento iterativo
+? Ciclos iterativos ? incremento
+? A duração de cada ciclo pode variar
+	– 4 semanas, 3 meses
+
+RequisitosRequisitosRequisitos
+
+ProjetoProjetoProjeto
+ 
+Implementação &		 Implementação 		  &Implementação &		Realização da
+Testes & Integração	 Testes & Integração	  Testes & Integração		iteração N leva
+& Mais Projeto	 ----->	 & Mais Projeto	  ----->  & Mais Projeto	----->  ao refinamento e
+		 tempo			  tempo					adaptação dos
+Integração Final 	 &Integração Final	  &Integração Final &		requisitos e do
+Teste de Sistema	 Teste de Sistema	  Teste de Sistema		projeto na iteração N+1
+	^
+	|
+Iterações são de			O sistema cresce incrementalmente
+tamanho fixo ou
+limitadas pelo tempo
+
+
+Processo Unificado
+? Baseado em casos de uso
+	– O que caso de uso?
+? Os casos de uso guiam o desenvolvimento
+	– Elicitação e negociação dos requisitos
+	– Testes de aceitação
+? Planejamento
+	– Iterações
+
+Processo Unificado
+? Centrado em arquitetura
+? “Arquitetura é a organização fundamental do sistema como um todo.Inclui elementos estáticos,
+dinâmicos, o modo como trabalham juntos e o estilo arquitetural que guia a organização do sistema.”
+? Alicerce do sistema
+? Arquitetura + casos de uso ? explorar o sistema
+
+PU - Fases
+? O processo é dividido em várias iterações
+? Cada fase agrupa iterações
+
+	Ciclo de Desenvolvimento
+	     Iteração              Fase
+ _________  __________  ________________________  _________
+[Concepção][Elaboração][	Construção	][Transição]
+	     Marco de		   Versão	  Entrega
+             referencia				  para uso
+
+PU - Fases
+-> Concepção
+? Viabilidade do projeto
+? Definição do escopo do sistema
+? Estimativas vagas
+? Riscos
+? Esboço da arquitetura
+
+-> Elaboração
+? Definição de requisitos funcionais (maioria)
+? Resolução dos altos riscos
+? Detalhamento da arquitetura
+? Estimativas mais realistas
+
+-> Construção
+? O sistema é efetivamente desenvolvido
+? Incrementos
+? Acontece o desenvolvimento iterativo e incremental
+? Preparação para a implantação
+
+-> Transição
+? Testes Beta
+? Entrega do software ao cliente
+? Incrementos são implantados
+? Correção de defeitos
+
+PU - Disciplinas
+? Representação (revisando... [Booch])
+
+ _________     ___________     __________________________  ______________
+[Inception]   [Elaboration]   [	       Construction      ][  Transition  ]
+ [IterI1]   [IterE1][IterE1]    [IterC1][IterC1][IterC3]  [IterT1][IterT1]
+
+
+
+Requirements -> Analysis & Design -> Implementation -> Test -> Dployment [for each Iteration]
+				Project Manager
+			Configuration and Change Management
+				Environment
+
+Processo Unificado ( - )
+? Pode tornar-se “heavyweight” se adotado de forma incorreta
+? Casos de uso não definem todos os requisitos
+? Complexo
+
+Processo Unificado ( + )
+? Alterações facilmente gerenciáveis
+? Integração de módulos desenvolvimentos com os já existentes
+? Análise de pontos críticos e planejamento de estratégias a cada iteração
+? Tudo é opicional
+	– Framework para instaciar seu processo
+
+Tipos de Requisitos
+
+? Existem diversas classificações
+? A seguinte classificação [Sommerville]:
+	– Requisitos funcionais
+	– Requisitos não funcionais
+
+Requisitos Funcionais
+? São requisitos diretamente ligados a...
+	– Funções que o sistema deve fornecer
+	– Como o sistema deve reagir a entradas específicas.
+	– Como o sistema deve se comportar em determinadas situações.
+	– Podem também declarar o que o sistema não deve fazer.
+
+Requisitos - Precisão
+? Surgem vários problemas quando os requisitos não são declarados de forma precisa.
+? Requisitos ambíguos podem ser interpretados de diferentes maneiras pelos desenvolvedores e usuários.
+
+Requisitos – Completeza e Clareza
+? Os requisitos devem ser completos e consistentes
+	– Completo
+? Eles devem incluir descrição de todas as facilidades que estão sendo requeridas.
+	– Consistente
+? Eles não devem apresentar conflitos ou contradições entre as descrições das facilidades fornecidas pelo sistema.
+? Na prática, é impossível produzir um Documento de Requisitos completo e consistente.
+
+Requisitos Não Funcionais
+? São requisitos que expressam:
+	– Restrições que o software deve atender.
+	– Qualidades específicas que o software deve ter.
+	– Requisitos de domínio
+
+
+Requisitos Não Funcionais - Tipos
+
+
+
+Requisitos do Produto		Requisitos Organizacionais		Requisitos Externos
+
+Requisitos			Requisitos				Requisitos
+de Eficiência			de Entrega				de Interoperabilidade
+
+   Requisitos			Requisitos				Requisitos
+   de Desempenho		de Implementação			Éticos
+
+   Requisitos			Requisitos				Requisitos
+   de Espaço			de Padrões				Legislativos
+
+Requisitos								   Requisitos
+de Confiabilidade							   de Privacidade
+
+Requisitos								   Requisitos
+de Portabilidade							   de Segurança
+
+Requisitos
+de Usabilidade
+
+
+Requisitos Não Funcionais
+? Requisitos Não-Funcionais podem ser muito difíceis de serem declarados precisamente
+? Podem ser utilizadas Metas
+	– Transmitem as intenções dos usuários do sistema.
+
+Requisitos Não Funcionais
+? Requisitos Não-Funcionais podem ser muito difíceis de serem declarados precisamente
+? Podem ser utilizadas Metas
+	– Transmitem as intenções dos usuários do sistema.
+
+
+Algumas métricas
+
+Velocidade
+   Transações processadas/segundo
+   Tempo de resposta ao usuário/evento
+   Tempo de refresh da tela
+
+Tamanho
+   K Bytes
+   Tamanho específico de memória
+
+
+Facilidade de uso
+   Tempo de treinamento
+   Número de frames de Help
+
+Confiabilidade
+   Tempo médio de falha
+   Probabilidade de indisponibilidade
+   Taxa de ocorrência de falhas
+   Disponibilidade
+
+Robustez
+   Tempo de reinício depois de falha
+   Porcentagem de eventos que causam falhas
+   Probabilidade de que dados sejam corrompidos por falhas
+
+Portabilidade
+   Porcentagem de declarações dependentes do sistema alvo
+   Número de sistemas alvo
+
+
+Requisitos de Domínio
+? São requisitos que são próprios do domínio da aplicação e que refletem características desse domínio
+	– Podem ser novos requisitos funcionais, restrições sobre os requisitos existentes ou definições sobre computações específicas.
+	– Se os requisitos do domínio não são satisfeitos, pode não ser possível operar o sistema de forma efetiva.
+
+Requisitos de Domínio - Exemplos
+? Deve haver uma interface-padrão com o usuário para todas as bases de dados, a qual deve estar baseada no padrão Z39.50
+
+A desaceleração do trem deve ser calculada como:
+? Dtrem = Dcontrole + Dgradiente , onde:
+? Dgradiente é 9.81ms2 *gradiente compensado/alpha
+? e onde os valores de 9.81ms2 /alpha são conhecidos para diferentes tipos de trem
+
+
+Requisitos de Domínio - Problemas
+? Dificuldade de compreensão!!!
+? Os requisitos são expressos em uma linguagem própria do domínio da aplicação
+? Em geral, essa linguagem não é compreendida pelos engenheiros
+? Conhecimento tácito
+? Os especialistas no domínio entendem tão bem da área que não consideram necessário explicitar os requisitos do domínio
+
+Engenharia de Requisitos
+? Representação
+
+Estudo de Viabilidade ---> Elicitação e Análise ---> Especificação ----> Validação 
+		           de Requisitos  	<--- de Requisitos <---- de Requisitos
+
+
+
+
+
+
+
+
+
+

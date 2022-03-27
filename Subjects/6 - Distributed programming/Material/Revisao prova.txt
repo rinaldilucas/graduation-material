@@ -1,0 +1,15 @@
+O autogerencimamento consiste em organizar o sistema distribuído com realimentações de alto nível, realizando assim mudanças e adaptações automáticas.
+O núcleo recebe a informação, a informação passa pelas métricas, sofre uma análise, passar por ajustes e sofre as correções, formando um loop.
+
+Se divide em interface, processamento e dados:
+interface: É a camada que o usuario interage. Ela faz requisições a camada de processamento.
+processamento: É a aplicação em si. Ela é o intermédio entre a interface e a persistência.
+dados: É a camada do servidor, geralmente um banco de dados (persistência). Esta camada é a camada responsável por fornecer os dados de persistência para a aplicação.
+
+baseada em objetos: chamada de procedimento remoto
+em camadas: requisicoes em hierarquia
+centrada em dados: comunicacao ocorre por meio de arquivos
+baseada em eventos: principal vantagem é que sao fracamente acoplados
+
+Pelo fato do sistema ser distribuído fisicamente, é possível que haja perda de pacotes durante as conexões. Por esse fato, a perda de pacote pode representar uma lentidão ou uma indisponibilidade do nó. O que se pode ser feito para suprir esse problema é fazer uma métrica de quantidade de tentativas antes de declarar a conexão indisponível. Por muita dessas vezes, é melhor o usuário saber o que aconteceu.
+

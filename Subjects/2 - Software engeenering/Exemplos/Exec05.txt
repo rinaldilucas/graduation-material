@@ -1,0 +1,24 @@
+Exec05
+
+• Omissão de funcionalidade
+
+RF2: O  sistema  deve  solicitar  a  informação  necessária  para  inserir, alterar ou excluir 
+um  item bibliográfico: título, autor, data, lugar, assunto, resumo, número, editor, periódico,
+congresso.
+
+
+RF3: O sistema deve dar uma mensagem de alerta quando o usuário tentar inserir um
+item incompleto. Essa mensagem deve questionar o usuário se ele deseja cancelar a
+operação ou  completar a informação. [ou concluir a inserção como está.] removido
+
+
+• Omissão de desempenho
+
+RNF1: O sistema deve fornecer os resultados tão rápido quanto possível (equipamento/tamanho da base.  numa media de 2 segundos).
+
+
+• Fato incorreto
+
+RF30: O sistema deve aceitar devolução de livros mesmo que o usuário não esteja com a
+carteirinha da biblioteca no momento, porem deve ser registrado este evento baseado nos dados pessoais do cliente.
+

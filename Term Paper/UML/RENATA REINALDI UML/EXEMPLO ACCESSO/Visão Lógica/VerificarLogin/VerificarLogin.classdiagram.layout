@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="VerificarLogin">
+  <logicalClassDesignerModelMoniker Id="e4565d6e-fdfb-47cb-91c2-76e8186081ab" />
+  <nestedChildShapes>
+    <classShape Id="f8bda05e-a7f1-4945-ad01-6a9f3fa33374" absoluteBounds="3.25, 1.125, 1.5, 1.3828124701976776" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="f777640f-e56d-4446-842f-1dbcce137f49" LastKnownName="VerificarLogin" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="3a090eda-c0e9-4c7e-bb2d-860520b670ba" absoluteBounds="3.265, 1.5150000000000001, 1.4700000000000002, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="fd431713-32f3-4f19-9eeb-c9ee2dca4a3d" absoluteBounds="3.265, 1.8863281125823657, 1.4700000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="VerificarLogin">
+  <logicalClassDesignerModelMoniker Id="e4565d6e-fdfb-47cb-91c2-76e8186081ab" />
+  <nestedChildShapes>
+    <classShape Id="f8bda05e-a7f1-4945-ad01-6a9f3fa33374" absoluteBounds="3.25, 1.125, 1.5, 1.3828124701976776" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="f777640f-e56d-4446-842f-1dbcce137f49" LastKnownName="VerificarLogin" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="3a090eda-c0e9-4c7e-bb2d-860520b670ba" absoluteBounds="3.265, 1.5150000000000001, 1.4700000000000002, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="fd431713-32f3-4f19-9eeb-c9ee2dca4a3d" absoluteBounds="3.265, 1.8863281125823657, 1.4700000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+>>>>>>> origin/master
+</logicalClassDesignerDiagram>

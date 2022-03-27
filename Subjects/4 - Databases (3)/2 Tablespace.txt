@@ -1,0 +1,40 @@
+CREATE TABLESPACE espaco1 LOCATION 'c:\Aula01';
+
+CREATE TABLE nome_tabela (id serial PRIMARY KEY)
+TABLESPACE espaco1;
+
+CREATE TABLESPACE ts01 LOCATION 'c:\Espaco1';
+CREATE TABLESPACE ts02 LOCATION 'c:\Espaco2';
+
+CREATE TABLE tabela01(
+	id serial PRIMARY KEY)
+	TABLESPACE ts01;
+	
+CREATE TABLE tabela02(
+	id serial PRIMARY KEY)
+	TABLESPACE ts02;
+	
+CREATE TABLE tabela03(
+	id INT,
+	idfk INT REFERENCES tabela01(id))
+	TABLESPACE ts02;
+	
+create schema meu_esquema01;
+create schema meu_esquema02;
+create schema meu_esquema03;
+
+create table meu_esquema01.pessoa (
+codpessoa serial primary key,
+nomepessoa varchar(100)
+);
+
+create table meu_esquema02.contato (
+codcontato serial primary key,
+codpessoafk int references pessoa (codpessoa),
+valor varchar(100)
+);
+
+insert into meu_esquema01.pessoa (nomepessoa) values ('John');
+
+insert into meu_esquema02.contato (codpessoafk, valor) values (1, 'john.lennon@utfpr.edu.br');
+

@@ -1,0 +1,29 @@
+1
+Processo de software são as etapas necessárias para a elaboração e desenvolvimento de um software, onde se transcreve as entradas pelas atividades realizadas e pelos objetivos definidos.
+
+2 
+Processo imaturo:
+
+O processo imaturo usa mal dos recursos causando acúmulo de trabalhos. Por não seguirem uma auditagem e padrão, o prazo do projeto se torna maior e os programadores 
+
+3
+Processo maduro:
+
+Processo maduro torna o processo mais produtivo, visivel para a equipe, melhor gerenciável e com mais presivibilidade de erros.
+
+4
+Para se obter um programas de qualidade com processos de qualidade é necessário se ter objetivos bem definidos e uma infraestrutura que satisfaça as necessidades. Um processo com prazos e escopos bem definidos aumenta a produtividade da equipe, evita custos indesejados arrumando defeitos que poderiam ser evitados e insatisfações por parte dos contratantes e clientes. 
+Uma empresa que carrega esses conceitos, com certeza aumenta sua competitividade no cenário e desenvolve um software com qualidade superior ao demais concorrentes.
+
+5
+O processo de mediação é o processo que faz a manutenção entre as variações no processo. Se foi encontrado algum desvio ou se for necessário alguma adição ou algo do gênero, é nessa etapa que é realizada.
+
+6
+Para se conseguir realizar todo o processo de desenvolvimento com qualidade, é necessário seguir todos o passos de forma afinca. Como o processo engloba várias etapas, o descumprimento de uma etapa afeta diretamente a próxima e assim sucessivamente.
+Uma organização madura com acompanhamento de cada etapa e das responsabilidades dos desenvolvedores, assegura a criação de um software de qualidade.
+
+7
+Para se obter um software de qualidade, é preciso pensar em vários fatores.
+São multiplos as visçoes de qualidade. Qualidade para usuario, desenvolver e organizações são coisas distintas, e por isso, são necessários requisitos bem definidos pelo usuario e pelas organizações. Para se obter um software/produto de qualidade que atenda todos estes requisitos, são necessários também, etapas de qualidade.
+Definir um padrão e definir responsabilidades para toda equipe faz com o que o processo de desenvolvimento seja mais organizado e de melhor qualidade, evitando erros e má gerenciamento de recursos.
+ 

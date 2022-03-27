@@ -1,0 +1,47 @@
+Base <--  Derivada
+Pai <-- Filha
+Superclasse ---> Subclasse
+
+
+
+public class Pessoa {
+
+- Nome
+- Idade
+
++ metA()
++ metB()
++ metA(int)  <-- polimorfirmso de sobrecarga
+
+}
+
+public class Aluno extends Pessoa{
+
+- RA
+- Nota
+
++ metC()
++ metA(String)  <-- polimorfismo de sobrecarga
++ metA()  <-- polimorfismo de reescrita
+
+}
+public class AlunoPos extends {
+
+- mensalidade
+	
+}
+
+herança é unilateral:
+classe filha herda caracteristicas da classe pai, mas a classe pai não ganha da filha
+Ex.: ao instanciar um objeto da classe filha pode se usar atributos e metodos da classe pai.
+
+herança sempre 
+
+polimorfismo de sobrecarga
+metodos com mesmo nome, mas com parametros diferentes dentro da mesma classe ou classes filhas
+
+polimorfismo de reescrita
+metodos com mesmo nome e mesma entrada de parametros porem em classes diferentes e compossiveis diferentes funçoes.
+
+
+

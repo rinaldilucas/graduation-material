@@ -1,0 +1,43 @@
+Escritório advocacia
+
+Cliente
+
+(Nome, Telefone)PK, endereço, sexo
+
+
+
+Processo
+
+CódigoPK, Valor_causa, Data_abertura, Local, Motivo
+
+
+
+Advogado
+
+CódigoPK, Nome, Endereço, Telefone, Área_atuação, Preço_hora
+
+
+
+Acompanhamento
+
+Data, Descrição
+
+
+Relacionamentos
+
+Cliente 1---<>---N Processo
+
+(Nome_Cliente,Telefone_Cliente)FK, Código_ProcessoPK, Valor_causa, Data_abertura, Local, Motivo
+
+
+Processo N---<>---N Advogado
+
+(codAdvogadoFK, ncodProcessoFK)PK, Valor_causa, Data_abertura, Local, Motivo
+
+
+Processo 1---<>---N Acompanhamento
+
+codProcessoFK, DataPK, Descrição
+
+
+

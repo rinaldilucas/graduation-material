@@ -1,0 +1,254 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5e345bd4-015e-4775-ac37-dc16bb6b58b1" name="DataContext" linkedPackageId="026e3d11-0f63-4d80-9e3b-0c7a9185d992" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="faec2d42-f98e-4cca-b546-afe6058c9700" name="DataContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f111ef17-82ee-448c-acbe-28f16b8a0b1c" />
+        <ownedOperationsInternal>
+          <operation Id="29b3287a-5639-477c-9322-598badade23f" name="InsertOnSubmit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="31e6f968-7b40-4b23-9a19-c1bde339969e" />
+          </operation>
+          <operation Id="181e727b-acda-4808-9138-7baf73540cbd" name="SubmitChanges" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1808c75c-a832-4dbf-8344-48c22f0da823" />
+          </operation>
+          <operation Id="f9dc9755-36d4-404b-96a9-11a361e018c0" name="Single" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2d2d72f3-e2bb-468f-b8f9-96ed0df9e2a4" />
+          </operation>
+          <operation Id="4c9add8c-37e9-412c-b8e7-035e6c0424d2" name="DeleteOnSubmit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6bcf4e97-7736-4c80-8d3b-f4a9b194a04d" />
+          </operation>
+          <operation Id="281d508b-9a4e-4efd-8a0c-a97bdca8e974" name="BeginTransaction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2fac3eeb-df4e-45c1-abb9-5ec455191d17" />
+          </operation>
+          <operation Id="ed394327-fc6b-40a7-b6cc-caecc768b358" name="CommitTransaction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b6f12740-b457-46be-bbb8-3f25d677b129" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="851db7ec-82f8-41e9-8e3a-54a484f04c7f" name="Log" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="23dc3665-68d4-4bb7-98a7-fd2b52d40a24" />
+        <ownedAttributesInternal>
+          <property Id="e28d207d-d4ec-4f32-aac0-f5946b80dabd" name="Categoria" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1775160a-698c-4cf8-97d5-439669744db3" />
+          </property>
+          <property Id="cc2356f2-6783-4dd9-9ea9-8e2f14883a89" name="CodEvento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="604550c3-03ff-4892-b583-c990a0cd2949" />
+          </property>
+          <property Id="081c9b50-22fc-4d82-92bb-93979a138303" name="Mensagem" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2c07e6df-4fde-4d7a-a9d4-1cbe01ba2eef" />
+          </property>
+          <property Id="13055dea-987e-469f-ab86-dab538c4fe6f" name="idUsuario" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="caae850a-9e9e-416b-a328-a55530b6c75a" />
+          </property>
+          <property Id="107a743a-2898-40b8-b7bd-3677e6cd9ec6" name="DataHora" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="acb80faf-1e9c-4122-bb4e-ecad7aa0d9c8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c7ff41d8-12b8-435e-801e-8f80fd60f67b" name="LogBO" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3822b874-e19a-4114-910b-cc1eb1f840f7" />
+        <ownedOperationsInternal>
+          <operation Id="6c4e0e8c-05a7-4581-bb6e-1430727bf89f" name="Salvar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="10db9eb6-5e52-445b-bfe0-701b6cef2274" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="24dbb522-4fe5-4fbc-a25d-5e794733f9b9" name="MasterPageStandard" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="32233714-2e42-4f1a-a1c5-0791feddd8e7" />
+        <ownedOperationsInternal>
+          <operation Id="1906b21f-7b09-44af-9c00-5972d7d762ce" name="ConfigurarPaginas" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="04e87230-939f-4594-9eff-2855eb2c08f4" />
+          </operation>
+          <operation Id="ffea1cec-0d2d-4eda-a558-4b6ae28b6613" name="ChecarPermissaoAcesso" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="03482a36-670e-457e-bee8-eb95f92fba95" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0d4b010-71c9-4558-9a5f-388bd0eb2707" name="Util" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6a058b8b-3557-4fc7-a131-fab9c2761c44" />
+        <ownedOperationsInternal>
+          <operation Id="1c04e910-8adc-41d5-8f59-c134596575c0" name="UploadArquivo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f81ade00-eeb3-42cb-b6b4-26b8a3fded96" />
+          </operation>
+          <operation Id="abca42dc-c71f-494e-a44e-1bd846c9b72d" name="CriarDiretorio" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d8965a71-499f-423f-8d33-f5005216434c" />
+          </operation>
+          <operation Id="8efbf6db-7b81-4208-a5be-7a6ceebb6265" name="DiretorioExists" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="24d5ffdb-7559-43d5-94ce-c1cc107374e6" />
+          </operation>
+          <operation Id="2913a1eb-b56b-4e85-9dcd-21c7d8339b5e" name="EnviarEmail" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a5987274-b409-4f57-8440-95bba45017c0" />
+          </operation>
+          <operation Id="61fe3316-5fc3-489b-86f1-eb25c7d61ae3" name="ExcluirArquivo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5c253f6c-c6f8-4580-a205-3f912bea4a02" />
+          </operation>
+          <operation Id="6b00ab5b-05c2-4716-9066-7106a259b31e" name="MontarModeloEmail" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b0223947-e5d3-4055-aca0-dda4070d4415" />
+          </operation>
+          <operation Id="ce32ee45-1a65-44b1-9cd5-717b70884090" name="ResizeImage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4dd8c04d-c633-4e1d-8946-8286940814f5" />
+          </operation>
+          <operation Id="a94caa23-5056-45dd-b50e-9b0571837357" name="ArquivoExists" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c699049d-af74-4233-8687-c0d1225c82fc" />
+          </operation>
+          <operation Id="c48b1775-c283-4a3b-a1b1-414fe9cd75cc" name="UploadImagem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4606aeda-3378-4dd4-80bc-fc615e4f387a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="026e3d11-0f63-4d80-9e3b-0c7a9185d992" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+    <profileInstances>
+      <packageHasProfileInstances Id="eadadef1-3a75-4d8b-931c-04c91629bca2">
+        <profileInstance Id="4f6fb22b-6d02-411c-b4fb-c4eff527297e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9bb51bbe-772c-42f4-8d9c-7e48e30f0403">
+        <profileInstance Id="4ed4f054-c885-4a2a-9b19-0159216f5cc5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5e345bd4-015e-4775-ac37-dc16bb6b58b1" name="DataContext" linkedPackageId="026e3d11-0f63-4d80-9e3b-0c7a9185d992" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="faec2d42-f98e-4cca-b546-afe6058c9700" name="DataContext" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f111ef17-82ee-448c-acbe-28f16b8a0b1c" />
+        <ownedOperationsInternal>
+          <operation Id="29b3287a-5639-477c-9322-598badade23f" name="InsertOnSubmit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="31e6f968-7b40-4b23-9a19-c1bde339969e" />
+          </operation>
+          <operation Id="181e727b-acda-4808-9138-7baf73540cbd" name="SubmitChanges" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1808c75c-a832-4dbf-8344-48c22f0da823" />
+          </operation>
+          <operation Id="f9dc9755-36d4-404b-96a9-11a361e018c0" name="Single" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2d2d72f3-e2bb-468f-b8f9-96ed0df9e2a4" />
+          </operation>
+          <operation Id="4c9add8c-37e9-412c-b8e7-035e6c0424d2" name="DeleteOnSubmit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6bcf4e97-7736-4c80-8d3b-f4a9b194a04d" />
+          </operation>
+          <operation Id="281d508b-9a4e-4efd-8a0c-a97bdca8e974" name="BeginTransaction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2fac3eeb-df4e-45c1-abb9-5ec455191d17" />
+          </operation>
+          <operation Id="ed394327-fc6b-40a7-b6cc-caecc768b358" name="CommitTransaction" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b6f12740-b457-46be-bbb8-3f25d677b129" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="851db7ec-82f8-41e9-8e3a-54a484f04c7f" name="Log" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="23dc3665-68d4-4bb7-98a7-fd2b52d40a24" />
+        <ownedAttributesInternal>
+          <property Id="e28d207d-d4ec-4f32-aac0-f5946b80dabd" name="Categoria" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1775160a-698c-4cf8-97d5-439669744db3" />
+          </property>
+          <property Id="cc2356f2-6783-4dd9-9ea9-8e2f14883a89" name="CodEvento" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="604550c3-03ff-4892-b583-c990a0cd2949" />
+          </property>
+          <property Id="081c9b50-22fc-4d82-92bb-93979a138303" name="Mensagem" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2c07e6df-4fde-4d7a-a9d4-1cbe01ba2eef" />
+          </property>
+          <property Id="13055dea-987e-469f-ab86-dab538c4fe6f" name="idUsuario" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="caae850a-9e9e-416b-a328-a55530b6c75a" />
+          </property>
+          <property Id="107a743a-2898-40b8-b7bd-3677e6cd9ec6" name="DataHora" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="acb80faf-1e9c-4122-bb4e-ecad7aa0d9c8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c7ff41d8-12b8-435e-801e-8f80fd60f67b" name="LogBO" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3822b874-e19a-4114-910b-cc1eb1f840f7" />
+        <ownedOperationsInternal>
+          <operation Id="6c4e0e8c-05a7-4581-bb6e-1430727bf89f" name="Salvar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="10db9eb6-5e52-445b-bfe0-701b6cef2274" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="24dbb522-4fe5-4fbc-a25d-5e794733f9b9" name="MasterPageStandard" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="32233714-2e42-4f1a-a1c5-0791feddd8e7" />
+        <ownedOperationsInternal>
+          <operation Id="1906b21f-7b09-44af-9c00-5972d7d762ce" name="ConfigurarPaginas" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="04e87230-939f-4594-9eff-2855eb2c08f4" />
+          </operation>
+          <operation Id="ffea1cec-0d2d-4eda-a558-4b6ae28b6613" name="ChecarPermissaoAcesso" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="03482a36-670e-457e-bee8-eb95f92fba95" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0d4b010-71c9-4558-9a5f-388bd0eb2707" name="Util" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6a058b8b-3557-4fc7-a131-fab9c2761c44" />
+        <ownedOperationsInternal>
+          <operation Id="1c04e910-8adc-41d5-8f59-c134596575c0" name="UploadArquivo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f81ade00-eeb3-42cb-b6b4-26b8a3fded96" />
+          </operation>
+          <operation Id="abca42dc-c71f-494e-a44e-1bd846c9b72d" name="CriarDiretorio" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d8965a71-499f-423f-8d33-f5005216434c" />
+          </operation>
+          <operation Id="8efbf6db-7b81-4208-a5be-7a6ceebb6265" name="DiretorioExists" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="24d5ffdb-7559-43d5-94ce-c1cc107374e6" />
+          </operation>
+          <operation Id="2913a1eb-b56b-4e85-9dcd-21c7d8339b5e" name="EnviarEmail" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a5987274-b409-4f57-8440-95bba45017c0" />
+          </operation>
+          <operation Id="61fe3316-5fc3-489b-86f1-eb25c7d61ae3" name="ExcluirArquivo" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5c253f6c-c6f8-4580-a205-3f912bea4a02" />
+          </operation>
+          <operation Id="6b00ab5b-05c2-4716-9066-7106a259b31e" name="MontarModeloEmail" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b0223947-e5d3-4055-aca0-dda4070d4415" />
+          </operation>
+          <operation Id="ce32ee45-1a65-44b1-9cd5-717b70884090" name="ResizeImage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4dd8c04d-c633-4e1d-8946-8286940814f5" />
+          </operation>
+          <operation Id="a94caa23-5056-45dd-b50e-9b0571837357" name="ArquivoExists" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c699049d-af74-4233-8687-c0d1225c82fc" />
+          </operation>
+          <operation Id="c48b1775-c283-4a3b-a1b1-414fe9cd75cc" name="UploadImagem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4606aeda-3378-4dd4-80bc-fc615e4f387a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="026e3d11-0f63-4d80-9e3b-0c7a9185d992" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+    <profileInstances>
+      <packageHasProfileInstances Id="eadadef1-3a75-4d8b-931c-04c91629bca2">
+        <profileInstance Id="4f6fb22b-6d02-411c-b4fb-c4eff527297e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9bb51bbe-772c-42f4-8d9c-7e48e30f0403">
+        <profileInstance Id="4ed4f054-c885-4a2a-9b19-0159216f5cc5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+>>>>>>> origin/master
+</logicalClassDesignerModel>

@@ -1,0 +1,22 @@
+
+//1
+1. Os requisitos estão consistentes entre si?
+//2
+1. As funções especificadas são coerentes com o sistema e com os objetivos a serem
+alcançados?
+
+//3
+1. As funções descritas são suficientes para alcançar os objetivos do sistema?
+//4
+2. As entradas declaradas para as funções são suficientes para que elas sejam executadas?
+3. Foram considerados os eventos indesejáveis e as respostas a eles foram especificadas?
+4. Foram considerados o estado inicial e os estados especiais (por ex. inicialização do sistema, término anormal)?
+
+//5
+1. Cada requisito foi especificado de forma discreta, não ambígua e testável?
+2. Todas as transições do sistema foram especificadas de forma determinística?
+//6
+1. Todas as funções especificadas são necessárias para alcançar os objetivos do sistema?
+2. As entradas das funções são necessárias para executá-las?
+3. As entradas e saídas das interfaces são necessárias?
+4. As saídas produzidas por uma função são usadas por outra função ou transferidas para a interface externa?

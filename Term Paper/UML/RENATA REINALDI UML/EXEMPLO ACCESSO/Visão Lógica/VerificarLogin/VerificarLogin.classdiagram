@@ -1,0 +1,82 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="e4565d6e-fdfb-47cb-91c2-76e8186081ab" name="VerificarLogin" linkedPackageId="a88215f4-600a-41f2-8876-e758f0dbed24" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="55705f78-b693-4e93-a6ee-46fb6e8588ea">
+      <profileInstance Id="2f4372c1-20d6-40f9-a773-5b4d84768c17" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5561d2ba-1643-4023-babb-245e6879ecf8">
+      <profileInstance Id="d95bada2-2695-4a94-a3a0-3d9703d9031f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f777640f-e56d-4446-842f-1dbcce137f49" name="VerificarLogin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a6d921ad-0e8c-4f1e-87f4-2dfe8f13487a" />
+        <ownedAttributesInternal>
+          <property Id="e2f626b0-d406-43cf-a3b7-d5a9526b3944" name="idVerificar" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bba14067-03c6-4b3b-9318-180d10526d92" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="8152262f-5e74-4f49-8983-68e18d74d256" name="VerificarClientes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d227032-13b8-41d0-a3e2-51f06679a9aa" />
+          </operation>
+          <operation Id="5d4e9e7c-cc98-4fc6-8b4e-fd206175bf87" name="VerificarReleases" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c8b2f93f-5364-440f-815e-128daf539fb8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="a88215f4-600a-41f2-8876-e758f0dbed24" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+  </package>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="e4565d6e-fdfb-47cb-91c2-76e8186081ab" name="VerificarLogin" linkedPackageId="a88215f4-600a-41f2-8876-e758f0dbed24" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="55705f78-b693-4e93-a6ee-46fb6e8588ea">
+      <profileInstance Id="2f4372c1-20d6-40f9-a773-5b4d84768c17" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5561d2ba-1643-4023-babb-245e6879ecf8">
+      <profileInstance Id="d95bada2-2695-4a94-a3a0-3d9703d9031f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f777640f-e56d-4446-842f-1dbcce137f49" name="VerificarLogin" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a6d921ad-0e8c-4f1e-87f4-2dfe8f13487a" />
+        <ownedAttributesInternal>
+          <property Id="e2f626b0-d406-43cf-a3b7-d5a9526b3944" name="idVerificar" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bba14067-03c6-4b3b-9318-180d10526d92" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="8152262f-5e74-4f49-8983-68e18d74d256" name="VerificarClientes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7d227032-13b8-41d0-a3e2-51f06679a9aa" />
+          </operation>
+          <operation Id="5d4e9e7c-cc98-4fc6-8b4e-fd206175bf87" name="VerificarReleases" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c8b2f93f-5364-440f-815e-128daf539fb8" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="a88215f4-600a-41f2-8876-e758f0dbed24" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+  </package>
+>>>>>>> origin/master
+</logicalClassDesignerModel>

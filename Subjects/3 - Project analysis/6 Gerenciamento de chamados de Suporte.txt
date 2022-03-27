@@ -1,0 +1,91 @@
+atores
+
+cliente
+analista
+sistema
+provedor de email
+
+
+casos de uso
+
+[] - Funcionalidades
+
+
+manter usuario
+- clientes [analista]
+- resolvedores [analista]
+
+manter setor
+- maquinas [analista]
+- total [analista]
+- individual [analista]
+
+manter tarefas
+- incidentes [analista]
+- requisições tecnicas [analista]
+- externos [analista]
+
+gerar relatorios por período/estado
+- chamados [analista/cliente]
+-- incidentes
+--- baixo impacto
+--- medio impacto
+--- alto impacto
+--- critico
+
+-- requisições tecnicas
+--- responsável
+--- Setor afetado
+
+-- externos
+--- responsável
+--- protocolo
+
+-- setor
+-- usuario
+-- resolvedores
+
+- setor
+- usuario
+- resolvedores
+
+gerar graficos por período/estado
+- chamados [analista/cliente]
+-- incidentes
+--- baixo impacto
+--- medio impacto
+--- alto impacto
+--- critico
+
+-- requisições tecnicas
+--- responsável
+--- Setor afetado
+
+-- externos
+--- responsável
+--- protocolo
+
+-- setor
+-- usuario
+-- resolvedores
+
+- setor
+- usuario
+- resolvedores
+
+[] - Movimentações
+
+Abrir chamado [analista/cliente]
+- categorizar [sistema/analista]
+- Direcionar para fila [sistema]
+- Notificar grupo Resolvedor [sistema]
+
+Fechar chamado [analista]
+- remover da fila [sistema]
+- somar chamdo ao resolvedor [sistema]
+- notificar grupo [sistema]
+
+Reabrir chamado [analista/cliente]
+- Direcionar para fila [sistema]
+- Notificar grupo [sistema]
+

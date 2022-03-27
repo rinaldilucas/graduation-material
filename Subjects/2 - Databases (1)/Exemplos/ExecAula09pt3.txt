@@ -1,0 +1,93 @@
+l)
+select max(nota) as maior_nota,
+min(nota) as menor_nota
+from aula, disciplina
+where disciplina.numDiscipPK = aula.numDiscipFK and
+disciplina.nome = 'Cálculo Numérico' and
+aula.semestre = '198';
+
+m)
+select aluno.nome, disciplina.nome, professor.nome
+from aluno, disciplina, professor, aula
+where aluno.numAlunoPK = aula.numAlunoFK and 
+disciplina.numDiscipPK = aula.numDiscipFK and
+professor.numFuncPK = aula.numFuncFK and 
+aula.semestre = '198'
+order by aluno.nome asc;
+
+n)
+select aluno.nome, disciplina.nome, aula.nota
+from aluno, disciplina, aula, curso
+where aluno.numAlunoPK = aula.numAlunoFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+curso.numCursoPK = aluno.numCursoFK and
+curso.nome = 'Ciência da Computação' and
+aula.semestre = '198';
+
+o)
+select avg(nota) as media_nota
+from aula, professor
+where professor.numFuncPK = aula.numFuncFK and
+professor.nome = 'Marcos Salvador';
+
+p)
+select aluno.nome, disciplina.nome, aula.nota
+from aluno, disciplina, aula
+where aluno.numAlunoPK = aula.numAlunoFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+aula.nota > 5 and
+aula.nota < 7
+order by disciplina.nome asc;
+
+q)
+select avg(nota) as media_nota
+from aula, disciplina
+where disciplina.numDiscipPK = aula.numDiscipFK and
+disciplina.nome = 'Cálculo Numérico' and
+aula.semestre = '198';
+
+r)
+select distinct professor.nome, count(aluno.nome) as qtdeAluno, aula.semestre
+from aluno, professor, aula
+where aluno.numAlunoPK = aula.numAlunoFK and
+professor.numFuncPK = aula.numFuncFK and
+professor.nome = 'Abgair Simon Ferreira' and
+aula.semestre = '198'
+group by professor.nome, aula.semestre;
+
+s)
+select aluno.nome, avg(aula.nota) as mediaNota,
+count(disciplina.numDiscipPK) as qtdeAulas
+from aluno, disciplina, aula
+where aluno.numAlunoPK = aula.numAlunoFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+aluno.nome = 'E.C.Silva'
+group by aluno.nome;
+
+t)
+select curso.nome, disciplina.nome, avg(aula.nota) as mediaNota
+from aula, curso, disciplina, discipCurso
+where disciplina.numDiscipPK = aula.numDiscipFK and
+curso.numCursoPK = discipCurso.numCursoFK and
+discipCurso.numDiscipFK = aula.numDiscipFK and
+aula.semestre = '198'
+group by disciplina.nome, curso.nome
+order by disciplina.nome asc;
+
+u)
+select professor.nome, avg(aula.nota) as mediaNotas, 
+count(aula.nota) as qtdeNotas
+from professor, aula
+where professor.numFuncPK = aula.numFuncFK and
+aula.semestre = '198'
+group by professor.nome;
+
+v)
+select curso.nome as cursoNome, disciplina.nome as discipNome, avg(aula.nota) as mediaNotas, aula.semestre
+from curso, disciplina, aula, discipCurso
+where curso.numCursoPK = discipCurso.numCursoFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+discipCurso.numDiscipFK = disciplina.numDiscipPK and
+curso.nome = 'Ciência da Computação' and
+aula.semestre = '198'
+group by curso.nome, disciplina.nome, aula.semestre;

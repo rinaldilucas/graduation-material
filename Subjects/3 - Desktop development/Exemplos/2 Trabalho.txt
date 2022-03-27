@@ -1,0 +1,86 @@
+2 - a) No construtor teria que mudar as variaveis int para cada posicao do vetor.
+
+ex: public Xpto (int a1, int b1, int c1) {
+	v[0] = a1;
+	v[1] = b1;
+	v[2] = c1;
+     };
+
+e os construtores ao inves de:
+
+public int produto(){
+	return (a*b*c);
+};
+
+seria:
+
+public int produto(){
+	return (V[0]*v[1]*v[2]);
+};
+
+b) 
+
+// Arquivo: Exemplo1.java
+public class Exemplo1 {
+
+public static void main(String[] args) {
+Xpto x1=new Xpto();
+Xpto x2=new Xpto(5,6,7);
+x1.v[0]=1;
+x1.v[1]=2;
+System.out.println(x1.soma());
+System.out.println(x2.soma());
+x1.v[2]=x2.v[0];
+x2.v[0]=x2.v[0]+1;
+System.out.println(x1.c);
+System.out.println(x2.a);
+};
+
+}; // class Exemplo1
+
+3 - a) teria que fazer um vetor private
+ex: private int v[];
+
+o construtor mudaria de:
+
+public Ypto(int a1, int b1, int c1) {
+	a=a1;
+	b=b1;
+	c=c1;
+};
+
+para:
+
+public Ypto(int a1, int b1, int c1) {
+	v[0]=a1;
+	v[1]=b1;
+	v[2]=c1;
+};
+
+e o metodo set de:
+
+public void setA(int a1){
+	a = a1;
+};
+
+para:
+
+public void setA(int a1){
+	v[0] = a1;
+};
+
+o metodo soma mudaria de:
+
+public int produto(){
+	return (a+b+c);
+};
+
+para:
+
+public int produto(){
+	return (v[0]+v[1]+V[2]);
+};
+
+b) nada.
+
+c) Que a goodsoft fez um programa muito mais consistente e seguro, pois o cliente não consegue alterar os valores da classe, que DEVE ser protegido pela classe, e que o cliente não precisa nem saber como funciona o funcionamento do programa para exercutá-lo.

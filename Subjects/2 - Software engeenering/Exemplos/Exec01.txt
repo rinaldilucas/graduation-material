@@ -1,0 +1,4 @@
+Exercicio 1 
+
+R1.4 - Deduz o estoque sem especificar teste de quantidade     -  Inconsistente
+R1.7 - Aarmazenamento de registros de vendas permanente, porem outros registros podem ser constantes.   - Ambiguo

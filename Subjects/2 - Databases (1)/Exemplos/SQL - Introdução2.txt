@@ -1,0 +1,49 @@
+-- criaão da base de dados
+create database advocacia;
+
+-- seleção da base de dados
+use advocacia;
+
+-- criação das tabelas
+create table cliente (
+id int not null,
+nome varchar(50) not null,
+endereco varchar(50),
+cidade varchar(25) not null,
+nascimento date
+);
+
+create table advogado (
+cod int not null,
+nome varchar(50) not null,
+area varchar(100),
+preco float(2)
+);
+
+create table cliAdv (
+idCliFk int not null,
+codAdvFK int not null
+);
+
+
+-- criação das chaves primarias
+alter table
+cliente add primary key (id);
+
+alter table
+advogado add primary key (cod);
+
+alter table cliAdv
+add primary key (idCliFK, codAdvFK);
+
+-- criação das chaves estrangeiras
+
+alter table cliAdv
+add constraint CliAdvcomCli 
+foreign key (idCliFK)
+references cliente (id);
+
+alter table cliAdv
+add constraint CliAdvcomAdv
+foreign key (codAdvFK)
+references advogado (cod);

@@ -1,0 +1,58 @@
+Exercício 2 
+
+RF2 - Inconsistencia
+
+O sistema deve solicitar ao pesquisador os itens de informação necessários para
+inserir  um  item  bibliográfico  na  bibliografia.  Os  itens  de  informação  são:  título, 
+data(mês/ano),  local,  resumo  da  publicação,  assunto,  numeração  física,
+editora, periódico (volume, número, páginas), congresso e forma de citação.[falta autor]
+
+O  sistema  deve,  no  caso  de  ocorrer  a  tentativa  de  inserção  de  um  item
+bibliográfico  já  existente,  [gerar um novo codigo de citação para este item.] 
+Neste caso, o pesquisador confirmar a operação de inserção, o sistema deve informar 
+que tal operação irá duplicar o item bibliográfico existente.
+
+inconsistencia pela falta do autor e dupicação do codigo
+
+
+
+RF4 - Fato Incorreto
+
+O  sistema  deve,  no  caso  de  ocorrer  a  tentativa  de  inserção  de  um  item
+bibliográfico  já  existente,  [gerar um novo codigo de citação para este item.] 
+Neste caso, o pesquisador confirmar a operação de inserção, o sistema deve informar 
+que tal operação irá duplicar o item bibliográfico existente.
+
+
+
+RF6 - Omissão
+ 
+O sistema deve fornecer facilidades para a criação e manutenção de uma lista de
+sinônimos.
+
+
+Ambiguidade
+
+RF4. O  sistema  deve,  no  caso  de  ocorrer  a  tentativa  de  inserção  de  um  item
+bibliográfico  já  existente,  [gerar um novo codigo de citação para este item.] 
+Neste caso, o pesquisador confirmar a operação de inserção, o sistema deve informar 
+que tal operação irá duplicar o item bibliográfico existente.
+
+RF7. O  sistema  deve  permitir  a  alteração  dos  itens  de  informação  de  um  item
+bibliográfico  da  bibliografia,  com  exceção  do  código  de  citação  que  é  gerado
+automaticamente  pelo  sistema.  O  pesquisador  pode  acessar/recuperar  um  item
+bibliográfico pelos itens de informação: autor, título e pelos sinônimos de autor e título,
+respectivamente.
+
+Ambiguidade devido ao codigo tratado de duas formas difrentes em cada requisito.
+
+
+
+Informação estranha
+
+RF1. O sistema deve permitir a inserção, alteração e exclusão de itens bibliográficos,
+mantendo uma bibliografia ou não.
+
+
+
+

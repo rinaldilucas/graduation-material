@@ -1,0 +1,57 @@
+Mapeamento Modelo Relacional
+
+Mapeamento de Entidades:
+
+Empresa: CNPJPK, nomeFantasia, razaoSocial
+Funcionario: codigoPK, nome, turno
+Cliente: RGPK, nome, tipoHabilitação 
+Veiculo: placaPK, preço, ano, cor
+Telefone: telefone
+Carro: numPassageiros
+Caminhão: numEixos
+Moto: cilindradas, numRodas
+
+Mapemaneto de Relacionamentos:
+
+Empresa 1---<tem>---N Funcionário
+
+Empresa: 
+Empresa: CNPJPK, nomeFantasia, razaoSocial
+Funcionario: codigoPK, nome, turno, CNPJ_EmpresaFK
+
+Cliente 1---<tem>---N Telefone
+
+Cliente: RGPK, nome, tipoHabilitação
+Telefone: (RG_ClienteFK)PK, telefone
+
+Cliente N---<aluga>---N Veículo
+
+Cliente: RGPK, nome, tipoHabilitação
+Veiculo: placaPK, preço, ano, cor
+
+veiculoCliente: (RGFK, placaFK, data)PK
+
+Funcionário 1---<aluga>---N veiculoCliente
+
+Funcionario: codigoPK, nome, turno
+veiculoCliente: (RGFK, placaFK, data)PK, codigoFuncionarioFK
+
+Mapeamento de Generalizações
+
+Veiculo: placaPK, preço, ano, cor
+Carro: placaFKPK, numPassageiros
+Caminhão: placaFKPK, numEixos
+Moto: placaFKPK, cilindradas, numRodas
+
+
+Conclusão
+
+Empresa: CNPJPK, nomeFantasia, razaoSocial
+Funcionario: codigoPK, nome, turno, CNPJ_EmpresaFK
+Cliente: RGPK, nome, tipoHabilitação
+Telefone: (RG_ClienteFK)PK, telefone
+Veiculo: placaPK, preço, ano, cor
+veiculoCliente: (RG_ClienteFK, placaFK, data)PK, codigoFuncionarioFK
+Carro: placaFKPK, numPassageiros
+Caminhão: placaFKPK, numEixos
+Moto: placaFKPK, cilindradas, numRodas

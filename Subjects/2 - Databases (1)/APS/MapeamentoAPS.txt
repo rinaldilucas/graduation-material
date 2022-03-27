@@ -1,0 +1,92 @@
+Locadora de Veículos
+
+
+	Mapeamento Entidades Fortes
+
+
+Cliente: rgPK, nome, endereço, tipoCarteira
+
+Veículo: placaPK, preço, ano, cor, modelo, marca
+
+Empresa: cnpjPK, razão_social, nome_fantasia
+
+Funcionário: codFuncionarioPK, nome, turno
+
+
+
+	
+	Entidades Multivaloradas
+
+
+Telefone: Telefone
+
+
+
+	Entidades Especializadas
+
+
+Carros: numPassageiros
+
+Caminhão: numEixos
+
+Moto: cilindradas, numRodas
+
+
+
+
+	Mapeamento Relacionamentos 1:N
+
+
+Empresa 1 ---<>--- N Funcionário
+
+Funcionário: codFuncionarioPK, nome, turno, cnpjEmpresaFK
+
+	
+
+	
+	Mapeamento Relacionamentos N:M
+
+
+Funcionário N ---<>--- M veiculoCliente
+
+veiculoCliente: (placaVeiculoFK, rgClienteFK, data)PK, codFuncionárioFK
+
+
+
+
+	Mapeamento Entidades Multivaloradas
+
+
+Cliente 1---<>---N Telefone
+
+Telefone: (rgClienteFk, telefone)PK
+
+
+
+
+	Mapeamento Agregação
+
+
+Cliente N ---<>--- N Veículo
+
+Cliente: rgPK, nome, endereço, tipoCarteira
+
+Veículo: placaPK, preço, ano, cor, modelo, marca
+
+veiculoCliente: (placaVeiculoFK, rgClienteFK, data)PK
+
+
+
+
+	Mapeamento Generalizações
+
+
+Veículo: placaPK, preço, ano, cor, modelo, marca
+
+Carros: placaVeiculoFK, numPassageiros
+
+Caminhão: placaVeiculoFK, numEixos
+
+Moto: placaVeiculoFK, cilindradas, numRodas
+
+

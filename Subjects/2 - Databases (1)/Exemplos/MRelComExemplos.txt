@@ -1,0 +1,169 @@
+Modelo Lógico Relacional (baseado em registros)
+1. Mapeamento das entidades fortes
+- a entidade -> tabela
+- os atributos -> colunas (exceto os atributos multivalorados)
+- a chave primária -> chave primária da entidade
+Ex.:
+cliente: idPK, nome, endereco, telefone
+1, andre, r. shogo oyamada, 261, (43)3520-3928
+2, alfredo, av. elizeu a. teixeira, 385, (14)3841-????
+advogado: codAdvogadoPK, nome, area, preco_hora
+1, jão, "adulterios", R$50,00
+2, zé, "alimentos", R$75,00
+processo: numProcPK, data_abertura, valor, causa, motivo, 
+1/2013, 21/10/2013, R$1.000.000,00, 171
+2/2013, 21/10/2013, R$100,00, furto qualificado
+
+2. Mapeamento das entidades fracas
+- a entidade -> tabela
+- a chave primária da entidade forte que a entidade fraca depende em existência -> coluna X
+- os atributos -> colunas (exceto os atributos multivalorados)
+- chave primária -> coluna X, atributo identificador da entidade fraca
+
+Exemplo:
+acompanhamento: (codProcFK, data)PK, descricao
+1/2013, 21/10/2013, protocolo inicial
+1/2013, 22/10/2013, encaminhado para a vara criminal correspondente
+2/2013, 22/10/2013, protocolo inicial
+
+3. Mapeamento dos relacionamentos N:M
+- o relacionamento -> tabela
+- a chave primária da entidade A -> coluna X
+- a chave primária da entidade B -> coluna Y
+- os atributos -> colunas
+- chave primária -> coluna X, coluna Y
+
+Exemplo:
+responsabilidadeProcesso: (codAdvogadoFK, numProcessoFK)PK, desdeQdoResp
+1, 1/2013, 20/10/2013
+1, 2/2013, 20/10/2013
+2, 2/2013, 20/10/2013
+
+4. Mapeamento dos Relacionamentos 1:N
+Chave primária do Lado 1 -> coluna no Lado M
+
+Exemplo: Ciente 1 ----<move>---- N Processo
+processo: numProcPK, data_abertura, valor, causa, motivo, idCliFK 
+1/2013, 21/10/2013, R$1.000.000,00, 171, 1
+2/2013, 21/10/2013, R$100,00, furto qualificado, 2
+
+5. Mapeamento dos Relacionamentos 1:1
+Chave primária de um dos Lado 1 -> coluna no outro Lado 1
+
+Exemplo: Empregado 1 ----<chefia>----- 1 Departamento
+empregado: idEmpPK, nome
+1, maria
+2, ruana
+departamento: idDeptoPK, nome
+1, DEA
+2, ROTA 
+Alternativa 1:
+empregado: idEmpPK, nome, idDeptoChefiaFK
+1, maria, 1
+2, ruana, 2
+departamento: idDeptoPK, nome
+1, DEA
+2, ROTA 
+Alternativa 2:
+empregado: idEmpPK, nome 
+1, maria
+2, ruana
+departamento: idDeptoPK, nome, idEmpregadoChefeFK
+1, DEA, 1
+2, ROTA, 2
+
+6. Mapeamento dos atributos multivalorados
+atributo multivalorado -> tabela
+chave primária da entidade que o atributo multivalorado pertence -> coluna X
+atributo multivalorado -> coluna Y
+chave primária: coluna X, coluna Y
+
+Exemplo:
+tefone: (idCliFK, telefone)PK
+
+Resposta final (esquema relacional do BD):
+cliente: idPK, nome, endereco, telefone
+advogado: codAdvogadoPK, nome, area, preco_hora
+processo: numProcPK, data_abertura, valor, causa, motivo, idCliFK 
+acompanhamento: (codProcFK, data)PK, descricao
+responsabilidadeProcesso: (codAdvogadoFK, numProcessoFK)PK, desdeQdoResp
+tefone: (idCliFK, telefone)PK
+
+7. Mapeamento Generealização / Especialização
+Exemplo veiculo ---<is a|carro e caminhão
+
+alternativa 1: muitos atributos na entidade geral e muitos atributos nas entidades especializadas
+
+entidade geral -> tabela
+atributos da entidade geral -> colunas
+chave primária da entidade geral -> chave primária
+entidiade(s) especializada(s) -> tabela(s)
+atributos da(s) entidade(s) especializada(s) -> colunas
+chave primária da(s) entidade(s) especializada(s) -> chave primária da entidade geral
+
+Exemplo: 
+veículo: placaPK, marca, modelo, ano
+carro: placaFKPK, numPassageiros
+caminhão: placaFKPK, numEixos
+
+alternativa 2: poucos atributos na entidade geral e muitos atributos nas entidades especializadas
+entidiade(s) especializada(s) -> tabela(s) 
+atributos da entidade geral + atributos da(s) entidade(s) especializada(s) -> colunas  
+chave primária da(s) entidade(s) especializada(s) -> chave primária da entidade geral
+
+Exemplo:
+carro: placaPK, marca, modelo, ano, numPassegeiros
+caminhão: placaPK, marca, modelo, ano, numEixos
+
+alternativa 3: muitos atributos na entidade geral e poucos atributos nas entidades especializadas
+entidade geral -> tabela
+atributos da entidade geral -> colunas
+atributos da(s) entidade(s) especializada(s) -> colunas
+
+Exemplo: 
+veículo: placaPK, marca, modelo, ano, numPassageiros, numEixos
+
+8. Mapeamento da agregação
+
+Exemplo
+-----------------------------------
+|paciente n ----<>----- n convenio |
+------------------------------------
+                 1
+                 |
+                 |
+                < >
+                 |
+                 |
+                 n
+               exame
+ 
+paciente: idPK, nome
+convenio: idPK, nome
+pacientesDoConvenio: (idPacienteFK, idConvenioFK)PK
+exame: idPK, descricao, (idPacienteFK, idConvenioFK)pacientesDoConvenioFK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

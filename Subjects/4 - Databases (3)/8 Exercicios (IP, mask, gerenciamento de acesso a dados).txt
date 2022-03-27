@@ -1,0 +1,48 @@
+Considere um SGDB que possui os seguintes 
+grupos (negrito) e usuários (sublinhados):
+• admin
+• user1
+• user2
+• comum
+• user1
+• user3
+ Além do super usuário postgresql
+
+
+ Considere que o arquivo pg_hba.conf possui as 
+seguintes regras: 
+host all postgres 127.0.0.1/32 trust
+host fluxofacil user1 127.0.0.1/32 reject
+host all admin 127.0.0.1/32 trust
+host teste all 127.0.0.1/32 trust
+host template2 comum 127.0.0.1/32 md5
+• Sabendo que o endereço 127.0.0.1/32 (e 
+também ::1/128) refere-se a própria máquina em que 
+o SGBD está instalado, assinale as alternativas 
+verdadeiras.
+
+Identifique as alternativas verdadeiras:
+a) O usuário postgresql pode acessar qualquer banco de dados, 
+mesmo que a conexão seja feita de outra máquina ( )
+b) Os usuários do grupo admin podem acessar qualquer banco de 
+dados, desde que estejam na mesma máquina do servidor ( )
+c) O banco de dados teste pode ser acessado por qualquer 
+usuário local sem a necessidade de senha ( )
+d) O usuário user1 só consegue acessar o banco template2 
+informando uma senha ( )
+e) O usuário user3 só consegue acessar o banco template2 
+informando uma senha ( )
+f) Estas configurações só permitem acesso local ( )
+g) Com estas regras o sistema nunca exibirá a mensagem de erro 
+“FATAL:  password authentication failed for user "postgres“ ( )
+h) Usuários que pertençam apenas ao grupo comum, só 
+conseguem acessar o banco de dados template2 ( )
+
+a) Verdadeiro
+b) Falso
+c) Falso
+d) Falso
+e) Verdadeiro
+f) Falso
+g) Verdadeiro
+h) Falso

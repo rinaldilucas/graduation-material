@@ -1,0 +1,182 @@
+O autogerencimamento consiste em organizar o sistema distribuído com realimentações de alto nível,
+ realizando assim mudanças e adaptações automáticas.
+O núcleo recebe a informação, a informação passa pelas métricas, 
+sofre uma análise, passar por ajustes e sofre as correções, formando um loop.
+
+Se divide em interface, processamento e dados:
+interface: É a camada que o usuario interage.
+ Ela faz requisições a camada de processamento.
+processamento: É a aplicação em si.
+ Ela é o intermédio entre a interface e a persistência.
+dados: É a camada do servidor, geralmente um banco de dados (persistência).
+Esta camada é a camada responsável por fornecer os dados de persistência para a aplicação.
+
+baseada em objetos: chamada de procedimento remoto
+em camadas: requisicoes em hierarquia
+centrada em dados: comunicacao ocorre por meio de arquivos
+baseada em eventos: principal vantagem é que sao fracamente acoplados
+
+Pelo fato do sistema ser distribuído fisicamente, é possível que haja perda de pacotes durante as conexões. 
+Por esse fato, a perda de pacote pode representar uma lentidão ou uma indisponibilidade do nó. 
+O que se pode ser feito para suprir esse problema é fazer uma métrica 
+de quantidade de tentativas antes de declarar a conexão indisponível.
+ Por muita dessas vezes, é melhor o usuário saber o que aconteceu.
+
+transport
+public class Servidor {    
+    private static Socket socket;
+    private static ServerSocket sv;    
+    private static DataInputStream in;    
+    public static void main(String[] args) {   
+        try {            
+            sv = new ServerSocket(2000);            
+            socket = sv.accept();            
+            in = new DataInputStream(socket.getInputStream()); 
+            int valor;
+            valor = in.readInt();    
+            if (valor % 2 == 0) {
+                System.out.println("Par " + valor);     
+            } else 
+            {
+                System.out.println("Impar " + valor);                  
+            }
+            socket.close();            
+        } catch(Exception e) {   }}}
+public class Servidor {    
+    private static Socket socket;
+    private static ServerSocket sv;    
+    private static ObjectInputStream in;    
+    public static void main(String[] args) {   
+        try {            
+            sv = new ServerSocket(2000);            
+            socket = sv.accept();            
+            in = new ObjectInputStream(socket.getInputStream());            
+            Pessoa p = (Pessoa) in.readObject();             
+            System.out.println("Nome: " + p.getNome());            
+            socket.close();            
+        } catch(Exception e) {
+        }}}
+public class Cliente {    
+    private static Socket socket;    
+    private static ObjectOutputStream out;    
+    public static void main(String[] args) {       
+        try {            
+            socket = new Socket("localhost", 2000);            
+            out = new ObjectOutputStream(socket.getOutputStream());            
+            Pessoa pessoa = new Pessoa("Lucas", 20);            
+            out.writeObject(pessoa);            
+            socket.close();            
+        } catch(Exception e) {         }}}
+tcp
+public class Servidor {    
+    public static Socket con;
+    public static ServerSocket sv;    
+    public static DataInputStream in;
+    public static DataOutputStream out;    
+    public static void main(String[] args) {        
+        try {
+            System.out.println("Sv open.");
+            sv = new ServerSocket(2000);
+            con = sv.accept();    
+            in = new DataInputStream(con.getInputStream());
+            String dados = in.readUTF();
+            out = new DataOutputStream(con.getOutputStream());
+            out.writeUTF(dados);
+            con.close();
+        } catch (IOException ex) { }}}
+public class Cliente {    
+    public static DataInputStream in;
+    public static DataOutputStream out;  
+    public static Socket con;
+    public static void main(String[] args) {
+        try {
+            Scanner sc = new Scanner(System.in);
+            con = new Socket("localhost", 2000);            
+            System.out.println("Digite msg: ");
+            String msg = sc.nextLine();
+            out = new DataOutputStream(con.getOutputStream());
+            out.writeUTF(msg);  
+            in = new DataInputStream(con.getInputStream());
+            msg = in.readUTF();                   
+            System.out.println("Msg: " + msg);            
+            con.close();            
+        } catch (IOException ex) { }}}
+udp
+public class Servidor {    
+    public static DatagramSocket dgSocket;
+    public static DatagramPacket dgPacket;    
+    public static InetAddress endereco;    
+    private static String res = "Sucesso";    
+    public static void main(String[] args) {        
+        try {         
+            dgSocket = new DatagramSocket(2000);        
+            byte[] msg = new byte[128];            
+            dgPacket = new DatagramPacket(msg, msg.length);            
+            System.out.println("Sv open.");            
+            dgSocket.receive(dgPacket);            
+            String solicitacao = new String(dgPacket.getData());            
+            if(solicitacao.contains("SOLICITACAO")) {                
+                endereco = dgPacket.getAddress();
+                int porta = dgPacket.getPort();                
+                System.out.println("Porta = "+porta);                                      
+                msg = res.getBytes();                
+                dgPacket = new DatagramPacket(msg, msg.length, endereco, porta);                
+                dgSocket.send(dgPacket);                
+            }            
+        } catch(Exception e) {}}}
+public class Cliente {    
+    public static DatagramSocket dgSocket;    
+    public static DatagramPacket dgPacket;    
+    public static InetAddress endereco;        
+    public static void main(String[] args) {
+        try {            
+            dgSocket = new DatagramSocket();
+            byte[] msg = new byte[128];            
+            String solicitacao = "SOLICITACAO";
+            msg = solicitacao.getBytes();            
+            endereco = InetAddress.getByName("localhost");            
+            dgPacket =  new DatagramPacket(msg, msg.length, endereco, 2000);            
+            dgSocket.send(dgPacket);              
+            System.out.println("Foi.");            
+            msg = new byte[128];            
+            dgPacket = new DatagramPacket(msg, msg.length);            
+            dgSocket.receive(dgPacket);            
+            String res = new String(dgPacket.getData());
+            System.out.println(res);           
+        } catch(Exception e) {}}}
+rmi
+public class Servidor implements Calculadora {
+    @Override
+    public long add(long a, long b) throws RemoteException {
+            return a + b;
+    }
+    @Override
+    public long sub(long a, long b) throws RemoteException {
+            return a - b;
+    }
+    @Override
+    public long mul(long a, long b) throws RemoteException {
+            return a * b;
+    }
+    @Override
+    public long div(long a, long b) throws RemoteException {
+            return a / b;
+    }
+    public static void main(String[] args) {
+        Servidor s = new Servidor();
+        try {            
+            Calculadora canal = (Calculadora) UnicastRemoteObject.exportObject(s,0);            
+            Registry registro = LocateRegistry.createRegistry(2000);                        
+            registro.bind("metodosRemotos", canal);   
+            System.out.println("Serv ON.");                 
+        } catch (Exception e) {        }}}
+public class Cliente {
+    public static void main(String[] args) {
+        try{
+            Registry registro = LocateRegistry.getRegistry("localhost", 2000);
+            Calculadora canal = (Calculadora) registro.lookup("metodosRemotos");            
+            System.out.println("A soma de 1 e 2 é: " + canal.add(1, 2));
+            System.out.println("A sub de 1 e 2 é: " + canal.sub(1, 2));
+            System.out.println("A mult de 1 e 2 é: " + canal.mul(1, 2));
+            System.out.println("A div de 1 e 2 é: " + canal.div(1, 2));                                         
+        }catch(Exception e){        }}}

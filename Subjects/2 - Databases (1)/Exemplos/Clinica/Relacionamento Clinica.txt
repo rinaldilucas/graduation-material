@@ -1,0 +1,32 @@
+Clinica MEdica
+
+Mapeamento de atributos
+
+Paciente
+
+(Nome, Telefone)PK, Endereço
+
+
+Convenio
+
+CNPJPK, Nome, Resp_contato
+
+
+Exame
+
+NumeroPK, Disgnostico, Descrição
+
+
+
+
+Relacionamento
+
+
+Paciente N---<>---N Convenio
+
+pacientesDoConvenio: ((NomeFK, TelefoneFK)FK, CNPJConvenioFK)PK
+
+
+PacientesDoConvenio 1---<>---N Exame
+
+Exame: ((NomeFK, TelefoneFK)FK, CNPJConvenioFK)FK, Diagnostico, Descrição

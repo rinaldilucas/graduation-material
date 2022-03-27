@@ -1,0 +1,103 @@
+1- a) p->prox = lista
+b) fim->prox = p
+c) fim = fim->prox
+
+2- a) Enquanto lista continuar a seguir seu ciclo, sendo diferente de nulo, a var exc ira receber seu endereço, fazendo com que nada se altere na estrutura original, e logo apos, ele dá um free.
+Ou seja, todos os ponteiros serão liberados após o while.
+
+3 - a) Como o while é de até tres, o ultimo ponteiro (do nó 4) não será liberado.
+
+4 - paint
+
+5- O resultado será 4 e 2.
+
+6 - O resultado vai sair 3 e 1, entrará no primeiro for atualizando o primeiro ponteiro, e etc;
+
+COD =
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+main(){
+    
+    typedef struct no {
+        int cod;
+        struct no *prox;
+    }No;
+    
+    int n, tam;
+    No *no1, *no2, *no3, *no4, *lista, *ant, *exc;
+    
+    no1 = (No *) malloc(sizeof(No));
+    no2 = (No *) malloc(sizeof(No));
+    no3 = (No *) malloc(sizeof(No));
+    no4 = (No *) malloc(sizeof(No));
+    
+    lista = no1;
+    no1->prox = no2;
+    no2->prox = no3;
+    no3->prox = no4;
+    no4->prox = NULL;
+    
+    no1->cod = 4;
+    no2->cod = 3;
+    no3->cod = 2;
+    no4->cod = 1;
+    
+    int a;
+    a = 2;
+   
+   
+    if (lista != NULL) {
+        n = a;
+        a = a+2;
+          exc = lista;
+          if (exc->cod == n)
+            lista = exc->prox;
+         else {
+            while (exc->cod != n) {
+                ant = exc;
+                exc = exc->prox;
+            }
+            ant->prox = exc->prox;
+         }
+        printf ("%d", exc->cod);
+        free (exc);                
+    }
+    
+    if (lista != NULL) {
+        n = a;
+        a = a+2;
+          exc = lista;
+          if (exc->cod == n)
+            lista = exc->prox;
+         else {
+            while (exc->cod != n) {
+                ant = exc;
+                exc = exc->prox;
+            }
+            ant->prox = exc->prox;
+         }
+        printf ("%d", exc->cod);
+        free (exc);                
+    }
+
+    while (lista != NULL) {
+    exc = lista;
+    printf ("%d", exc->cod);
+    lista= lista->prox;
+    }
+    
+}
+   
+   
+    
+   
+
+
+
+7 - paint
+
+
+

@@ -1,0 +1,9 @@
+Requisitos Funcionais e Não-Funcionais
+
+
+O sistema deve ler arquivos nos formatos wma, mp3 e ogg de no maximo 200MB  por arquivo.
+O sistema deve tratar qualquer função executada em ate no maximo 1 segundo/operação.
+O sistema deve conter a funcionalidades para play/pause, forward, rewind, controlador de volume.
+O sistema deve ter uma interface simplificada para que seja utilizado por qualquer nivel de usuários.
+O sistema deve se apresentar a arte do album, o nome da artista(grupo musical) e o nome da musica ao usuário.
+O sistema deve ter portabilidade para diversas plataformas (ex.: Windows, Linux, iOS).

@@ -1,0 +1,21 @@
+HTML
+-> HEAD
+    ->TITLE
+    ->METADATA
+->BODY
+    ->HEADER
+    ->FOOTER
+    ->SECTION
+    ->ASIDE
+    ->NAV
+    ->ARTICLE
+    ->H1 ... H6 = TEXTOS
+    ->OL
+    ->UL
+    ->DL
+    ->LI
+    ->DT
+    ->DD
+    ->BR = QUEBRA DE LINHA
+    ->HR = TRAÇO
+    ->&NBSP; = ESPAÇO

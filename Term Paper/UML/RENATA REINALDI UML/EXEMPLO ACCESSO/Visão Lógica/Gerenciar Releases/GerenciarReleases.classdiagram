@@ -1,0 +1,302 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f0cdf004-1c7d-4a6f-af61-036223ffa291" name="GerenciarReleases" linkedPackageId="ad9103da-fc03-455d-b5e5-233b51bba735" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2db17164-4f61-4b58-a545-684762036357" name="Releases" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6c06366f-c118-47ff-ba2e-21f874c81635" />
+        <ownedAttributesInternal>
+          <property Id="e64bde9e-2228-4871-b5c1-6faded42105a" name="idRelease" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2eb3035f-1d14-484e-9735-5808f1ab91d5" />
+          </property>
+          <property Id="e47268e2-fcff-4893-b239-74f0fc5adbb3" name="titulo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2bda88e7-7f10-4693-a495-7abe8cb84d14" />
+          </property>
+          <property Id="24f1bbdb-cd08-411f-bf5d-c44330975297" name="descricaoBreve" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="899af401-e21e-4c0c-8bde-4124ee2c2267" />
+          </property>
+          <property Id="b8cd694e-d012-43c1-bf1a-90e192d5bd67" name="descricaoLonga" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d4a4f373-ce5b-4492-8468-e73d6683048f" />
+          </property>
+          <property Id="314feea2-31a7-49e3-81b3-092901f5d652" name="caminhoImagem" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8ee2edc5-911b-4e1a-b087-4c59708f46a9" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a40f6413-9fba-424b-8cf7-bd83b9ce74b1" name="ReleasesBO" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="34d726b4-5b3e-4e3b-a763-fba89896048d" />
+        <ownedOperationsInternal>
+          <operation Id="1267a553-d13f-4fcf-9692-8eb9d3fc02ae" name="ListarReleasesPorCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c9feae8-0a38-4b3c-a1f0-e4c52248fa24" />
+          </operation>
+          <operation Id="266877aa-01d9-4b6f-a4e1-b76d9b8bf0d7" name="ConsultarTodos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f9f8e99-087f-4a78-9e73-adc4cdf6c83a" />
+          </operation>
+          <operation Id="6610eb58-5d0b-4371-91f6-82f85931cea0" name="Excluir" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9e47933e-3677-4565-a7f8-05fb9f31e03b" />
+          </operation>
+          <operation Id="8da2daca-84be-420b-a9e6-64b26a8e203a" name="Salvar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0b19366e-1788-4e5e-b603-6e33c33c6712" />
+          </operation>
+          <operation Id="22f8afd7-c39f-4808-9229-8c793dfdf686" name="Alterar" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f25747a5-bf25-409a-afbe-c78c4dd4449f" />
+          </operation>
+          <operation Id="331f5fb0-5d91-4315-903b-ca37d690e43b" name="Inserir" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0a70c2d6-a40e-4aa8-9b56-64f41583fce4" />
+          </operation>
+          <operation Id="368d6ed3-632a-43fd-9fd8-d0a21f9b2a1e" name="ConsultarPorId" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6c2496a-7dd6-4f18-a255-c72ebb68135f" />
+          </operation>
+          <operation Id="1ff5d915-fb73-46fb-b55d-c89ce774fa25" name="ConsultarTodosPorIdCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c82c894d-805f-4051-86b6-1d13cc8b636b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="671de7d3-c075-431b-b676-a3c6733513e3" name="Admin_Lukas_ReleaseDados.aspx.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1214838f-9e33-4326-a8d5-c5be6fb0abcf" />
+        <ownedOperationsInternal>
+          <operation Id="a7473716-0d6e-42ee-9308-af268b133c90" name="btnSalvar_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5b799d14-5496-4fed-bbc9-d990a391b03e" />
+          </operation>
+          <operation Id="59baef39-1e55-425d-8829-2901adf4fbe2" name="MapearCamposParaObjeto" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="61ae4b60-e55f-4ec0-bec6-efb076ddf7aa" />
+          </operation>
+          <operation Id="cd1a57c3-13c1-43d4-8223-10e376dfbbab" name="MapearObjetoParaCampos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dd215bcd-2183-4d0e-b04a-a350bf7a207b" />
+          </operation>
+          <operation Id="3c2cfbb4-b59a-4794-b6cb-db7397639d84" name="MontarCaminhoNavegacional" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="72e612a8-d5c1-4f98-bc82-b74119641e22" />
+          </operation>
+          <operation Id="85b4dd86-5474-4eaa-8318-7ac777a170a1" name="Page_Load" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55da2cca-d435-499d-b2a3-a1561606b0f5" />
+          </operation>
+          <operation Id="fffab3e3-04ae-498d-ab64-434f2c3c41a4" name="Salvar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5b92c1a1-fa97-4e92-9f86-f4ac35d94b04" />
+          </operation>
+          <operation Id="fbb9e673-f010-4698-b106-93c7ff96d640" name="VerificaTextoRelease" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="52ffe7c0-9363-4b66-8c90-2290d52c5e6d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="390df2f3-321f-456e-bfff-5b14e3bba15e" name="Lukas_ReleaseDados.aspx" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0db68a66-6385-4b26-9aab-af1b9b425dc3" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0757d37c-aa87-4ac8-8a0a-ed923b02459e" name="Admin_Lukas_ReleaseGer.aspx.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5484a961-7b45-498b-81ec-b546a080cf4f" />
+        <ownedOperationsInternal>
+          <operation Id="1f9e5aad-1231-40b3-9f10-2880d0b4f756" name="Excluir" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="53519aad-92f2-4bdb-a80f-f501fca725d7" />
+          </operation>
+          <operation Id="40369e42-d346-4b6c-8e32-8821f8eace50" name="imbExcluirCliente_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="578434ef-35c4-4b37-943f-47165c3ed2f0" />
+          </operation>
+          <operation Id="2d290737-ea4d-42d6-8e45-f9765aac0d8e" name="lbtAnterior_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="40970664-1edc-4751-8318-9ba1500b0150" />
+          </operation>
+          <operation Id="db0276ed-03ba-4aee-bcc1-c73c04b6b462" name="lbtProximo_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="58570a9b-2f0b-48ef-b137-30d3e5c1b87c" />
+          </operation>
+          <operation Id="786d90a6-03c1-4490-93f3-324ec621c62f" name="MontarCaminhoNavegacional" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6613f8cf-c429-4ecd-b9d5-1a56c68044e7" />
+          </operation>
+          <operation Id="77202ef4-7407-490b-aaed-5533ce1776de" name="MontarDataTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="449c51af-be28-4367-b4ff-a2b2da7e30ff" />
+          </operation>
+          <operation Id="8cfcefe4-0797-4706-b898-3f3ed7353dd4" name="MontarListaPaginada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ff96fd6f-dddb-4b43-ae38-6a4114ce6486" />
+          </operation>
+          <operation Id="fac9e017-5e6d-4ff8-be4d-23a0e4bace1e" name="MontarRepeater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e676e5bf-db2b-482f-95a0-469b56c78338" />
+          </operation>
+          <operation Id="411d2dd6-6b18-449c-a7a1-e013d33a0720" name="Page_Load" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="28d38511-3bed-4c19-b294-07a594888aca" />
+          </operation>
+          <operation Id="d8947cce-b98b-40e0-a3ca-ca3a735043a6" name="ListaReleaseCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="552e6393-7576-48ba-ad8d-2645fab34a82" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0ccdd757-8f2e-4c27-8c2d-d20a19657841" name="Lukas_ReleaseGer.aspx" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0ee01259-8257-4b0b-bd54-33661798bb27" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ad9103da-fc03-455d-b5e5-233b51bba735" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+    <profileInstances>
+      <packageHasProfileInstances Id="3a76e4ea-517e-4d5d-a838-44eed2f7c284">
+        <profileInstance Id="122162e6-5e5a-4bb6-8f6c-2e2e345c1b83" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6c44960d-63a5-4ae8-96a1-d5cc52ba74e6">
+        <profileInstance Id="0fe73b66-b01a-4798-a2a8-5761c4a09572" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f0cdf004-1c7d-4a6f-af61-036223ffa291" name="GerenciarReleases" linkedPackageId="ad9103da-fc03-455d-b5e5-233b51bba735" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2db17164-4f61-4b58-a545-684762036357" name="Releases" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6c06366f-c118-47ff-ba2e-21f874c81635" />
+        <ownedAttributesInternal>
+          <property Id="e64bde9e-2228-4871-b5c1-6faded42105a" name="idRelease" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2eb3035f-1d14-484e-9735-5808f1ab91d5" />
+          </property>
+          <property Id="e47268e2-fcff-4893-b239-74f0fc5adbb3" name="titulo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2bda88e7-7f10-4693-a495-7abe8cb84d14" />
+          </property>
+          <property Id="24f1bbdb-cd08-411f-bf5d-c44330975297" name="descricaoBreve" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="899af401-e21e-4c0c-8bde-4124ee2c2267" />
+          </property>
+          <property Id="b8cd694e-d012-43c1-bf1a-90e192d5bd67" name="descricaoLonga" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d4a4f373-ce5b-4492-8468-e73d6683048f" />
+          </property>
+          <property Id="314feea2-31a7-49e3-81b3-092901f5d652" name="caminhoImagem" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8ee2edc5-911b-4e1a-b087-4c59708f46a9" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a40f6413-9fba-424b-8cf7-bd83b9ce74b1" name="ReleasesBO" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="34d726b4-5b3e-4e3b-a763-fba89896048d" />
+        <ownedOperationsInternal>
+          <operation Id="1267a553-d13f-4fcf-9692-8eb9d3fc02ae" name="ListarReleasesPorCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c9feae8-0a38-4b3c-a1f0-e4c52248fa24" />
+          </operation>
+          <operation Id="266877aa-01d9-4b6f-a4e1-b76d9b8bf0d7" name="ConsultarTodos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f9f8e99-087f-4a78-9e73-adc4cdf6c83a" />
+          </operation>
+          <operation Id="6610eb58-5d0b-4371-91f6-82f85931cea0" name="Excluir" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9e47933e-3677-4565-a7f8-05fb9f31e03b" />
+          </operation>
+          <operation Id="8da2daca-84be-420b-a9e6-64b26a8e203a" name="Salvar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0b19366e-1788-4e5e-b603-6e33c33c6712" />
+          </operation>
+          <operation Id="22f8afd7-c39f-4808-9229-8c793dfdf686" name="Alterar" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f25747a5-bf25-409a-afbe-c78c4dd4449f" />
+          </operation>
+          <operation Id="331f5fb0-5d91-4315-903b-ca37d690e43b" name="Inserir" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0a70c2d6-a40e-4aa8-9b56-64f41583fce4" />
+          </operation>
+          <operation Id="368d6ed3-632a-43fd-9fd8-d0a21f9b2a1e" name="ConsultarPorId" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6c2496a-7dd6-4f18-a255-c72ebb68135f" />
+          </operation>
+          <operation Id="1ff5d915-fb73-46fb-b55d-c89ce774fa25" name="ConsultarTodosPorIdCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c82c894d-805f-4051-86b6-1d13cc8b636b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="671de7d3-c075-431b-b676-a3c6733513e3" name="Admin_Lukas_ReleaseDados.aspx.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1214838f-9e33-4326-a8d5-c5be6fb0abcf" />
+        <ownedOperationsInternal>
+          <operation Id="a7473716-0d6e-42ee-9308-af268b133c90" name="btnSalvar_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5b799d14-5496-4fed-bbc9-d990a391b03e" />
+          </operation>
+          <operation Id="59baef39-1e55-425d-8829-2901adf4fbe2" name="MapearCamposParaObjeto" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="61ae4b60-e55f-4ec0-bec6-efb076ddf7aa" />
+          </operation>
+          <operation Id="cd1a57c3-13c1-43d4-8223-10e376dfbbab" name="MapearObjetoParaCampos" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dd215bcd-2183-4d0e-b04a-a350bf7a207b" />
+          </operation>
+          <operation Id="3c2cfbb4-b59a-4794-b6cb-db7397639d84" name="MontarCaminhoNavegacional" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="72e612a8-d5c1-4f98-bc82-b74119641e22" />
+          </operation>
+          <operation Id="85b4dd86-5474-4eaa-8318-7ac777a170a1" name="Page_Load" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="55da2cca-d435-499d-b2a3-a1561606b0f5" />
+          </operation>
+          <operation Id="fffab3e3-04ae-498d-ab64-434f2c3c41a4" name="Salvar" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5b92c1a1-fa97-4e92-9f86-f4ac35d94b04" />
+          </operation>
+          <operation Id="fbb9e673-f010-4698-b106-93c7ff96d640" name="VerificaTextoRelease" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="52ffe7c0-9363-4b66-8c90-2290d52c5e6d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="390df2f3-321f-456e-bfff-5b14e3bba15e" name="Lukas_ReleaseDados.aspx" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0db68a66-6385-4b26-9aab-af1b9b425dc3" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0757d37c-aa87-4ac8-8a0a-ed923b02459e" name="Admin_Lukas_ReleaseGer.aspx.cs" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5484a961-7b45-498b-81ec-b546a080cf4f" />
+        <ownedOperationsInternal>
+          <operation Id="1f9e5aad-1231-40b3-9f10-2880d0b4f756" name="Excluir" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="53519aad-92f2-4bdb-a80f-f501fca725d7" />
+          </operation>
+          <operation Id="40369e42-d346-4b6c-8e32-8821f8eace50" name="imbExcluirCliente_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="578434ef-35c4-4b37-943f-47165c3ed2f0" />
+          </operation>
+          <operation Id="2d290737-ea4d-42d6-8e45-f9765aac0d8e" name="lbtAnterior_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="40970664-1edc-4751-8318-9ba1500b0150" />
+          </operation>
+          <operation Id="db0276ed-03ba-4aee-bcc1-c73c04b6b462" name="lbtProximo_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="58570a9b-2f0b-48ef-b137-30d3e5c1b87c" />
+          </operation>
+          <operation Id="786d90a6-03c1-4490-93f3-324ec621c62f" name="MontarCaminhoNavegacional" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6613f8cf-c429-4ecd-b9d5-1a56c68044e7" />
+          </operation>
+          <operation Id="77202ef4-7407-490b-aaed-5533ce1776de" name="MontarDataTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="449c51af-be28-4367-b4ff-a2b2da7e30ff" />
+          </operation>
+          <operation Id="8cfcefe4-0797-4706-b898-3f3ed7353dd4" name="MontarListaPaginada" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ff96fd6f-dddb-4b43-ae38-6a4114ce6486" />
+          </operation>
+          <operation Id="fac9e017-5e6d-4ff8-be4d-23a0e4bace1e" name="MontarRepeater" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e676e5bf-db2b-482f-95a0-469b56c78338" />
+          </operation>
+          <operation Id="411d2dd6-6b18-449c-a7a1-e013d33a0720" name="Page_Load" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="28d38511-3bed-4c19-b294-07a594888aca" />
+          </operation>
+          <operation Id="d8947cce-b98b-40e0-a3ca-ca3a735043a6" name="ListaReleaseCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="552e6393-7576-48ba-ad8d-2645fab34a82" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0ccdd757-8f2e-4c27-8c2d-d20a19657841" name="Lukas_ReleaseGer.aspx" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0ee01259-8257-4b0b-bd54-33661798bb27" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ad9103da-fc03-455d-b5e5-233b51bba735" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+    <profileInstances>
+      <packageHasProfileInstances Id="3a76e4ea-517e-4d5d-a838-44eed2f7c284">
+        <profileInstance Id="122162e6-5e5a-4bb6-8f6c-2e2e345c1b83" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="6c44960d-63a5-4ae8-96a1-d5cc52ba74e6">
+        <profileInstance Id="0fe73b66-b01a-4798-a2a8-5761c4a09572" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+>>>>>>> origin/master
+</logicalClassDesignerModel>

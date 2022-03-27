@@ -1,0 +1,61 @@
+div {
+	height: 150px;
+	width: 300px;
+	color: white;
+	font-size: 20pt;
+	position: relative;
+}
+
+body div:hover {
+	background-color: grey;
+}
+
+div:hover .subMenu {
+	display: block;
+	transition: 0.5s;
+	opacity: 1;
+	transform: scale(1);
+	position: absolute;
+	left: 300px;
+/*	background-color: grey;*/
+}
+
+ul.subMenu {
+	opacity: 0;
+	transform: scale(0);
+	background-color: black;
+}
+
+ul:hover {
+	background-color: #6699FF;	
+}
+
+li {
+	height: 150px;
+	width: 300px;
+	background-color: black;
+}
+
+li.subMenuClick:hover {
+	background-color: #6699FF;
+}
+
+div.vermelho {
+	background-color: red;
+}
+
+div.azul {
+	background-color: blue;
+}
+
+div.rosa {
+	background-color: pink;
+}
+
+div.amarelo {
+	background-color: yellow;
+}
+
+div.verde {
+	background-color: green;
+}

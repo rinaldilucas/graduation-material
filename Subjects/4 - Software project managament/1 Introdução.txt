@@ -1,0 +1,8 @@
+-> Definição dos temas
+ - Declaração dos objetivos - GERAL
+			      ESPECIFICO
+
+ - Casos de Usos  (Cenário)
+		  (Escopo)
+
+ - Diagrama de Sequencia

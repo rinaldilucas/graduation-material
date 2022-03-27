@@ -1,0 +1,64 @@
+Seguradora de veículos
+
+
+Mapeamento de Atributos
+
+
+Cliente:
+
+CPFPK, Nome, Endereço, Sexo
+
+
+Veículo:
+
+PlacaPK, Ano_Fabricação, Valor_Segurado
+
+
+Acidente:
+
+(Hora, Nome_Motorista)PK, Data, Valor_perda
+
+
+Carro :
+
+Modelo, Num_Passageiros
+
+
+Caminhão:
+
+Carga_max, Num_Eixos
+
+
+
+Mapeamento Relacionamentos
+
+
+Cliente N---<>---N Veículo
+
+veículo: (CPFFK, PLacaPK)PK, Ano_Frabricação, Valor_Segurado
+
+
+Veículo 1---<>--- N Acidente
+
+Acidente: (Nome, Hora)PK, Data, valor, PLacaFK
+
+
+
+
+Mapeamento generalização
+
+
+Veículo:
+
+PlacaPK, Ano_Fabricação, Valor_Segurado
+
+
+Carro :
+
+PlacaPK, Modelo, Num_Passageiros
+
+
+Caminhão:
+
+PlacaPK, Carga_max, Num_Eixos
+

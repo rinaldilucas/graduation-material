@@ -1,0 +1,13 @@
+Ex 1:
+	Qualidade de Software é o total de características de determinado produto/serviço juntamente com suas funcionalidades explícitas e as funcionalidades esperadas de um software bem desenvolvido.
+
+Ex 2:
+ 	Na visão popular, o preço quase domina o conceito de qualidade.
+ 	Já na visão profissional, a qualidade está nos atributos relacionados aos requisitos propostos. Se um requisito não for desenvolvido como o proposto, este não terá uma qualidade absoluta.
+
+ Ex 3:
+ 	Pois em cada ecossistema (usuário, desenvolvedor e organização), as variáveis são distintas.
+ 	Pro usuário final, a qualidade poderia ser que um determinado software iniciasse mais rapidamente. Já para o programador, a qualidade poderia ser uma biblioteca de programação mais rápida, eficiente e leve disponível (com um custo), e já para a organização, qualidade poderia ser o programador conseguir os mesmos resultadeos sem nenhum custo. Determinadas variáveis serão mais propicias em determinados ecossistemas.
+
+	 Uma qualidade em relação a software que eles poderiam ter em comum, seria um software final operante que cumpre todas especificações funcionais e não funcionais, intuitivo para o usuário final e rentável.
+

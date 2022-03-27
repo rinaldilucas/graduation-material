@@ -1,0 +1,11 @@
+instancia é uma foto da tabela, registros.
+
+comandos para alterar uma instancia:
+
+UPDATE
+INSERT
+DELETE  = DML
+
+ADD COLUMN = DDL
+
+GATILHO: pode ser usados nos 3 comandos acima, e acima alguma coisa, ex: chamar uma funcao de maneira automatica (pode ser ntes ou depois), disparado por alguma coisa.

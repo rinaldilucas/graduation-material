@@ -1,0 +1,64 @@
+create
+-  database
+-  table
+
+
+creata database nomeQualquer;
+create table outroNome (
+id int not null,
+nome varchar(50) not null;
+
+drop
+-  database
+-  table
+
+ex.
+
+drop database nomeQualquer;
+drop table outroNome;
+
+alter
+   table
+   
+--add
+--alter (SQL Server) / modify (MySql)
+--drop
+
+Ex.: add
+
+alter table nomeQualquer add
+constraint nomeConstraint
+foreing key(colunaFK)
+  references tabela(colunaPK);
+
+alter table nomeQualquer add
+primary key (colunaPK);
+
+alter table nomeQualquer add
+column nomeColunaNova varchar(50);
+
+alter table nomeQualquer add
+constraint nomeRestricao
+  check(colunaAVerificacao >= 0);
+
+
+Ex.: alter
+
+
+alter table nomeQualquer alter
+column nomeColunaNova varchar(100);
+
+
+Ex.: drop
+
+
+alter table nomeQualquer drop
+primary key;
+
+alter table nomeQualquer drop
+constraint nomeConstraint;
+
+
+alter table nomeQualquer drop
+column nomeColunaNova;
+

@@ -1,0 +1,23 @@
+a)
+select * from curso;
+
+b)
+select endereco, telefone
+from aluno
+where cidade = 'São Carlos'
+order by nome desc;
+
+c)
+select admissao
+from professor
+where admissao < '01/01/1993';
+
+d)
+select nome
+from aluno
+where nome like 'J%';
+
+
+select nome
+from aluno
+where substring(nome, 1, 1) = 'J';

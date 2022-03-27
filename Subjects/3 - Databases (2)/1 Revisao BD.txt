@@ -1,0 +1,56 @@
+zag655@gmail.com
+jgoncalves@utfpr.edu.br
+--------------------------------------------------------------------------------------------------
+
+aplicacao -> sgbd -> metadados
+		  -> banco de dados
+
+
+meta dados = descreve como a coisa deve funcionar
+ex: create table pessoa (cpf int, nome char[30]) (cria estrutura da tabela)
+
+^ DDL (Cria estrutura)
+
+
+ex: insert into pessoa (cpf, nome) values (1,'jesus');
+use, update,
+
+^ DML (comando de manipulacao de dados)
+
+
+select nome
+from pessoa;     exibe todos os nomes da tabela pessoa (em uma tabela temporaria)
+where cpf > 0    condição
+
+
+>>Como é constituida uma base de dados: usuario, aplicacao, sgbd, meta dados, base dados armazenada.
+
+----------------------------------------------------------------------------------------------------
+
+
+|-----------------|-------------|-------------|---------------|------------------|
+levantamento   analise       projeto    implementacao       teste       manutencao
+    dos          dos 
+ requisitos    requisitos
+               
+
+projeto fisico: banco de dados
+projeto logico: aplicacao (qualquer linguagem de prog)
+
+
+>>as camadas sao independentes
+
+
+//ex de tabela (MR = modelo relacional)
+create table pessoa (
+cpf int,
+rg int,
+nome char[30],
+idade int,
+endereco char[40]
+);
+
+ME-R = desenhos das tabelas
+
+
+

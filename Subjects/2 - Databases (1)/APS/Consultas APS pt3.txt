@@ -1,0 +1,45 @@
+Relatórios
+
+1 - Clientes em debito
+
+2 - Veiculos Locados no ano de 2013
+
+3 - Quantos veiculos são carros e quantos são motos
+
+4 - 
+
+5 - Lucro 2013
+
+
+1-
+
+select cliente as clientes_debito,
+from Cliente, Veiculo, veiculoCliente
+where cliente.RK_PK = veiculoCliente.RG_FK and
+veiculo.placa_PK = veiculoCliente.placa_FK and
+veiculoCliente.data >
+
+
+2 -
+select veiculos,
+from veiculos
+where data = '2013';
+
+3 - 
+select count(carro.placaFK) as Num_carros,
+count(moto.placaFK) as Num_moto,
+from carro, moto, veiculo
+where
+veiculo.placaPK = carro.placaFK and
+veiculo.placaPK = moto.placaFK;
+
+4-
+
+
+
+5-
+select sum(veiculo.preço) as Lucro_total,
+from veiculo, veiculoCliente
+where 
+veiculo.placaPK = veiculoCliente.placaFK and
+veiculoCliente.data between '01.01.2013' and '31.12.2013';

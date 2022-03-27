@@ -1,0 +1,343 @@
+Definição de concorrência
+Implementação de concorrência
+Problemas de Compartilhamento
+Exclusão Mútua
+Soluções de Hardware e? Soluções de Software
+Sincronização Condicional
+Semáforos
+Monitores
+Deadlocks
+
+Aplicações concorrentes melhoram o desempenho de sistemas monoprocessados escalonamento) e multiprocessados (paralelismo). Aplicações concorrentes usam processos que compartilham recursos (arquivos, memória, etc.) e comunicam-se entre si (variáveis compartilhadas, troca de mensagens).
+Devem ser sincronizadas para evitar problemas de acesso e compartilhamento de recursos.
+
+mecanismos de sincronização, e são fundamentais em SOs multiprogramáveis. notações: fork and join / parbegin and par end
+PARBEGIN indica o início de um bloco de comandos a ser executado de maneira concorrente
+PAREND define o fim do bloco de comandos concorrente.
+1º Problema: Compartilhamento de arquivo em disco.
+ Situação  programa Conta_Corrente atualiza o saldo bancário de um cliente no rquivo Arq_Contas.
+Arquivo Arq_Contas armazena os saldos de todos os correntistas do banco. Programa lê o registro do cliente (Reg_Cliente), lê o valor a ser depositado ou retirado (Valor_Dep_Ret) e atualiza o saldo.
+2º Problema: Compartilhamento de variável em memória
+(SOMA)
+Exclusão Mútua Solução para race conditions, evitar que os processos acessem o recurso simultaneamente. 
+Para que isso aconteça, enquanto um processo estiver acessando um recurso, os outros ficam aguardando.
+Com isso, um processo está excluindo o outro com relação ao recurso, o que chamamos de Exclusão Mútua (mutual exclusion).
+ A exclusão mútua não deve afetar os processo durante todo o processamento, mas sim nos momentos nos quais ocorrem acessos ao recurso compartilhado. Região Crítica  Parte do código em que é feito o acesso ao recurso compartilhado. 
+Objetivo da exclusão mútua é evitar que 2 processos entrem em suas regiões críticas ao mesmo tempo.
+Exemplo exclusão mutua: Programa Conta_Corrente ? Protocolo de entrada antes de ler registro, Protocolo de saída na conclusão da atualização dos dados.
+Problemas na exclusão mutua:
+Starvation (espera indefinida), quando um processo não consegue acessar sua regiao crítica, criterio do so para selecionar qual dos processos em espera vai ser o próximo a utilizar o recurso, dependendo pode haver starvation.
+-escolha aleatória	
+-baixa prioridade
+FILA (SOLUCAO)
+Problema:
+Processo fora da região crítica impede que outros processos entrem em suas regiões críticas. Ocorre quando um processo aloca o recurso mas não está em região crítica.
+Solucao:
+Desabilitar interrupções: solução radical, se caso comprometer, pode parar o sitema todo,  útil para kernels.
+Test and set: instrução indivisível, garante que dois processos não manipulem uma variável compartilhada ao mesmo tempo.
+
+PROGRAM TestandSet_Instruction;
+VAR Bloqueio: BOOLEAN;
+PROCEDURE Processo_A;
+VAR Pode_A: BOOLEAN;
+BEGIN
+REPEAT
+Pode_A := True;
+WHILE (Pode_A) DO
+Test-And-Set(Pode_A,Bloqueio);
+Regiao_Critica_A;
+Bloqueio := False;
+UNTIL False;
+END;
+PROCEDURE Processo_B;
+VAR Pode_B: BOOLEAN;
+BEGIN
+REPEAT
+Pode_B := True;
+WHILE (Pode_B) DO
+Test-And-Set(Pode_B, Bloqueio);
+Regiao_Critica_B;
+Bloqueio := False;
+UNTIL False;
+END;
+BEGIN
+Bloqueio := False;
+PARBEGIN
+Processo_A; Processo_B;
+PAREND;
+END
+
+Vantagens: simplicidade de implementação para várias regiões críticas e para arquiteturas com múltiplos processadores.
+Desvantagem: Possibilidade de starvation, pois a seleção do processo é arbitrária.
+Para implementação da exclusão mútua foram propostos vários algoritmps. As rimeiras soluções serviam apenas para 2 processos concorrentes, e foram evoluindo conforme veremos:
+1º: solução simples para 2 processos onde há um loop eterno, usando uma variável d segurança para restringir o acesso a região critica. Limita a velocidade, só funciona para 2 processos e se caso der falha na variável de seg, o outro processo ficara bloq.
+2º: usa uma var de seg para cada processo, resolve o primeiro alg, mas se caso der falha na var de seg o outro processo fica bloqueado.
+3º:coloca var CA e CB antes do loop teste, mutex garantida pois nunca Ca e cb serão falsas, porem pode haver bloqueio junto se ambas ficarem true
+4º:apenas minimiza o problema do terceiro.
+DEKKER: complexo (usa do primeiro ao quarto)
+PETERSON: Usa CA e CB e var VEZ, garante mutex sem  bloqueios, facilmente generaliazdo por n processos.
+
+PROBLEMA DA MUTEX: BUSY WAIT
+processo que não pode usar o recurso fica testando a condição,  até que haja recursos, ele consome processador-> SINCRONIZACAO
+
+conditional sync => Produtor consumidor: enquanto um grava outro lê.
+deve haver uma CONDIÇÂO para que o produtor não tente gravar em um buffer cheio e o consumidor ler de um buffer vazio. (ainda existe espera ocupada)
+
+SEMAFOROS
+DIJKSTRA: mto utilizado atualmente, 2 instrucoes indivisíveis: UP e DOWN.
+Semaforo = 0 = espera;
+Implementados no hw do Server, garantindo.
+BINARIOS:  0 ou 1;
+CONTADORES: any positive;
+Mutex with semáforo: no busy wait, down e up funcionam como protocol of exit;
+Associa se binary ao recurso compartilhado: 0 para busy, 1 para livre;
+Quando um processo deseja entrar em uma região critica, ele executa o comando down, fazendo com que o semáforo valha 0, se caso outro processo querer acessar o recurso (usando down), ele entrará na fila de espera. Quando o processo inicial for liberado, o comando UP será executado, fazendo com que o semáforo valha 1, liberando acesso ao recurso. O outro processo então poderá acessá-lo normalmente (selecionado pela fila).
+
+SINCRONIZACAO CONDICIONAL com SEMAFOROS
+usa3 semaforos, 1 para mutex e 2 para verificar buffer (vazio e cheio). Usar dessa forma é comum paraquando há um pool de recursos. Quando o contador chegar a 0, o pool está esgotado.
+
+MONITORES
+conceito de sincronização estruturada (semáforo não estruturada), alto nível estruturado, pois são implementados pelo compilador. (mais confiável que semáforo, que é implementado pelo programador)
+Implementa automaticamente os mutex entre seus procedimentos. Sempre que houver alguma chamada, o monitor verifica se há outro procedimento em execução, se houver, direciona para uma fila.
+
+A mutex dos monitores é explicita. São colocados como procedimentos, definidos dentro do monitor, garantindo a execução.
+
+A sincronização condicional com monitor utiliza variáveis especial (WAIT (espera), SIGNAL (libera)).
+SIGNAL libera apenas o primeiro processo da fila.
+
+DEADLOCK 
+Situaçao que um processo espera um recurso que nunca ficara disponível.
+
+PREVENÇÃO
+Para haver deadlock 4 condições:
+
+Mutex (cada recurso para apenas 1 processo);
+Impossivel nao haver devido a concorrência.
+
+Espera por recurso (Processo já tem recurso mas espera os outros)
+para não haver espera, uma maneira é alocar todos recursos do processo de uma vez, se não estiverem todos disponíveis, alocar os que estão e aguardar o resto. Inconveniente pelo fato de esperar muito para ser usado rapidamente, e também não saber a quantidade de recurso necessários, também podendo haver starvation.
+Não preempção (processo não libera recurso só porque outro pediu)
+Liberar um recurso que esta sendo usado porque um outro recurso pediu pode causar starvation, pois o processo inicial pode nunca mais ter esse recurso de volta, e nem todos os processos conseguem liberar o recurso no meio da execucao e retoma-lo.
+
+Espera circular
+forçar o processo a ter apenas um recurso por vez.	 
+
+ Não há como prevenir.
+
+DETECÇÃO
+SO deve detectar a ocorrência para tentar corrigir:
+Maior segurança causa maior OVERHEAD.
+
+CORREÇÃO
+Eliminar processos e desalocar seus recursos (por prioridade ou aleatoriedade), sendo menos drástico usar um ROLLBACK, na prática, causando muito OVERHEAD. 
+-----------------------------------------------------------------
+Estrutura do Sistema Operacional
+-----------------------------------------------------------------
+Sistema operacional
+– Conjunto de rotinas que oferecem serviços 
+aos usuários, aplicações e ao próprio 
+sistema (núcleo ou kernel)
+
+------------------------------------------------------
+PROCESSOS
+------------------------------------------------------
+System call
+– Gerência de processos e threads
+– Gerência de memória
+– Gerência do sistema de arquivos
+– Gerência de dispositivos
+
+Arquitetura Microkernel Melhoria na organização das funções e recursos do sistema
+Redução no tempo de desenvolvimento Facilidade de implementação do modelo de computação distribuída
+
+
+
+PCB
+Ponteiros
+e s t a d o d o p r o c e s s
+R e g i s t r a d o r e s
+N o m e d o p r o c e s s o
+P r i o r i d a d e d o p r o c e s s o
+L i m i t e s d e m e m ó r i a
+L i s t a d e a r q u i v o s a b e r t o s
+
+ESTADOS
+Execução (running)
+Pronto (ready)
+Espera (wait)
+
+Mudanças de estados
+\/     O \//\           estado de execução
+O    ->	O   estado pronto
+Espera
+Estrutura de um Processo
+nome, PID, owned, prioridade execução, data/hr criação, tempo de processador, quotas privilegio(software) / endereço de memoria principal alocados (endereçamento) / regiustrador de estatus regirstrador sp registrador pc registradores gerais (hardware)
+
+
+processos concorrentes
+muitas vezes necessitam comunicacao entre si
+
+mecanismo de sincronizacao = responsavel pela comunicacao entre processos concorrentes e o acesso a recursos compartilhados
+obrigatorio em multiprogramaveis
+
+parbegin
+parend
+
+race condition:
+situacao na qual a qual alguns processos chegam numa regiao critica
+
+mutex 
+exclusividade de recursos
+
+regiao critica é a parte do cod onde se é encontrado o recurso compartilhado
+necessario um protocolo de entrada e saida
+
+
+REGRAS EXCLUSAO MUTUA
+2 ou mais processos nao podem estar na mesma regiao critica
+progressao-> nenhum outro processo pode bloquear a execucao de outro
+espera limitada -> nenhum processo deve ficar esperando eternamente
+(cuidado com prioridades)
+nao quer dizer que se voce tem varios processadores voce deve deixar ele acessar a regiao critica, para aumentar a perfomance
+
+sincronizacao condicional
+um recurso pode nao estar disponivel por algo especifico,
+
+
+
+SEMAFOROS;
+DOWN e UP
+
+MUTEX COM SEMAFORO:
+sem espera ocupada
+quando um processo nao poder acessar, ao inves de esperar ele DORME
+
+1 - alguem usa
+0 - ngm usa
+
+dead lock
+
+mutex, espera por recurso, nao preempcao e espera circular
+
+
+
+
+-----
+criterios para determinar qual processo ira usar o processador;
+os criterios utilizados compoem as politica de escalonamento, que é a base da gerencia do processador;
+escalonamente = pronto para execução.
+*qualquer um pode ter acesso (pois estao prontos, porem há uma selecao, criterios, qual será o proximo?)
+-manter processador ocupado, balancear uso cpu/thread, maximizar throughput, privilegiar os criticos, oferecer tempo razoavel de resposta
+
+a rotina do sistema que tem a funcao de implementar as politicas de escalonamento = scheduler (escalonador), fundamental para o processador.
+
+dispatcher é o responsavel pela troca de contexto apos o escalonador determinar o processo escolhido.
+
+CRITERIOS:
+
+dependendo de cada so pode variar os criterios de escalonamento (sistema de tempo compartilhado exige que todos sejam tratados iguais, e de tempo real deve priorizar os processos criticos.)
+
+UTILIZACAO DE PROCESSADOR:
+deve permanecer ocupado pela maior parte de seu tempo
+
+throughput:
+representa o numero de processos executados em uma determinado intervalo de tempo. MAIOR = MELHOR
+
+TEMPO processador/cpu
+é o tempo que processo leva no tempo de execucao. a politica de escalonamento nao interfere, sendo esse tempo apenas do cod da aplicacao e das entradads de dados
+
+tempo de espera:
+tempo total que o processo permanece na fila de PRONTO. MENOR = MELHOR
+
+tempo de turnaround:
+tempo de vida do processo, desde a inicializacao (aloca informacao da memoria) até a hr do seu termino
+t
+tempo de resposta:
+tempo entre a requisicao ao sistema ou aplicacao e o instante que a resposta é exibida.
+(tempo de teclar e ver a resposta no monitor), geralmente a resposta depende da velocidade de dispositivo e/s.
+
+ESCALONAMENTOS:
+
+
+preempcao = quando o so encerra um processo e inicia outro
+
+nao preemptivo:
+nenhum evento externo faz com que ele perca o uso do processador por um processo em execucao. só sai do estado de execucao caso termine seu processamento ou execute as instrucoes do proprio cod que façam ele entrar em espera.
+
+preemptivo:
+é caracterizado pela possibilidade do so interromper um processo em execucao e passa-lo para estado de pronto, com obj de alocar outro processo na CPU.
+
+FIFO:
+first in first out
+
+shortest job first:
+executa o que tem menor tempo de processador, ordenando a fila de espera pelos processos que tem o menor tempo da cpu
+
+coperativo:
+o proprio processo cede a vez para outro processo a fim de uma melhor distribuicao de uso no processador (mas possui uma serie de problemas)
+
+circular:
+preemptivo para SO de tempo compartilhado, semelhante ao FIFO, mas tem um tempo limite de tempo (chamado de fatia de tempo) ou QUANTUM, se caso o tempo for alcançado, o processo vai ao final da fila, e outro processo entra (em forma de fila)
+
+prioridades:
+preemptivo, realizado baseado em um valor associado aos processos chamado prioridade de execucao.
+o processo será sempre o com mais prioridade. se caso as prioridades forem iguais, o metodo usado será o fifo. nao há timeslice, e nao há parada de processos por meio de tempo. quando um processo de maior prioridade aparece, o atual é pausado, salvo seus dados e lançado na fila.
+
+circular com prioridade:
+processo fica em execucao até que termine, e voluntarimente passe de execucao para pronto, ou sofra uma preempcao por tempo ou prioridade (indo pro fim da fila)
+
+escalonamento por ultimas filas:
+diversas filas em pronto, cada qual com sua prioridade. associados as filas em funcao das caracteristicas proprias, podendo usar varios metodos: uma fila usa fifo, outra usa prioridade, uma pelo mais rapido, podendo ser possivel ver um criterio para o uso
+
+POLITICA DE ESCALONAMENTO EM SISTEMA DE TEMPO COMPARITLHADO STC
+geralmente, STC caracterizam pela interatividade, exigindo tempo de resposta baixos
+a escolha de uma politica pra esse proposito deve ter um compartilhamento d recursos equitativo.
+--
+um nrefinamento no balanceamento pode ser obtido pelo ESCALONAMENTO CIRCULAR COM PRIORIDADE DINAMICAS.
+Com isso é possivel o adm do sistema alterar a prioridade do processo, ou por ser muito usado, ou por pouco
+
+POLITICA DE ESCALONAMENTO EM SISTEMA DE TEMPO REAL
+diferente da anterior, algumas app especificas exigem respostas imediatas p/ execucao das tarefas, nesse caso é necessario serem feitos nesse tipo de politica, onde é garantida a execucao dos processos dentro de limites rigidos de tempo. (trafego area, bem industrial, controle de produção)
+deve-se levar a importancia relativa de cada tarefa da aplicacao, em funcao disso, o escalonamento por prioridade é o mais adequado, já que para cada processo uma proridade é associada em funcao da importancia do processo da aplicacao.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+solucao fragmentacao externa:
+deixar como está, esperando o programa finalizar (pratica ruim)
+mover as areas utilizadas (complexo, nao viavel)
+
+estrategia de alocacao de partição:
+tentam evitar a fragmentaca externa
+varios fatores, e todo sistema possui uma lista de areas livres com endereço e tamanho
+
+best-fit:
+escolho o espaco que sobra menos
+ordenado pelo tamanho
+
+worst-fit:
+maior espaço sem utilizacao
+
+first-fit:
+escolha da primeira particao livre,
+pouco recurso utilizado'
+
+SWAPPING  
+swap win sec -> principal
+swap out principal -> sec 
+
+

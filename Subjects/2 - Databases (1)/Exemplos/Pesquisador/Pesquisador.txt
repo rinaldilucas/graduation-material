@@ -1,0 +1,59 @@
+Projeto Pesquisa:
+
+Entidades
+
+Pesquisador:
+RGPK, Nome, Endereço
+
+
+Projeto:
+NomePK, Duração, Desconto
+
+
+Equipamento:
+Num_SériePK, Preço, Desconto
+
+
+Computador:
+Processador, Memoria, Placas
+
+
+Impressora:
+Tipo_impressão, Custo_folha
+
+
+Scanner:
+Resolução, Vel_digitalização
+
+ 
+
+Relacionamento Pesquisador 1 ----<>---- N Projetos
+
+Projetos: RGPesqFK, NomePK, Duração, Desconto
+
+
+Relacionamento Projeto 1 ----<>---- N Equipamento
+
+Equipamento: NomeProjetoFK, Num_SériePK, Preço, Desconto
+
+
+
+
+Mapeamento Generalização ---<is a>
+
+
+Equipamento:
+Num_SériePK, Preço, Desconto
+
+
+Computador:
+Num_SérieFK, Processador, Memoria, Placas
+
+
+Impressora:
+Num_SérieFK, Tipo_impressão, Custo_manut
+
+
+
+
+

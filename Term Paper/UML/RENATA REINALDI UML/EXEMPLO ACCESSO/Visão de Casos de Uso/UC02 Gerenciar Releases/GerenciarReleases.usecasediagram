@@ -1,0 +1,182 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="b777dfe6-c322-49f2-ac9a-7747d0d3b9ff" name="GerenciarReleases" linkedPackageId="996b7d3c-82ed-401b-a85d-cb354f48adb6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6767edf8-d652-4de7-bf1b-488e73ac2c0e" name="Gerente de Conteúdo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="77285e98-b292-4a84-811e-9f0b5f0cf669" />
+        <targetEnds>
+          <association Id="38887cc5-d3fb-47fd-a8bb-0f8921cc3b6b" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Gerenciar Empresas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2e675edc-600f-453d-818f-9aa901dcc922" LastKnownName="Gerenciar Clientes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="de75e001-592d-497a-a7f8-b0b022f10abe" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0709815d-5dc2-4af6-8c9c-804467fbbba0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac804694-7d1f-4d1a-8b0b-1e9d08afde08" name="Gerenciar Empresas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8adcc4d-bff5-49a7-a270-6c6ba27a2066" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0bb56dfd-ef66-472b-b1a5-176a93e78dda" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4e929e73-3a43-48f9-bf59-4b602e95df7b" name="Gerenciar Releases" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b578b295-386e-463d-8740-bfa834082d5a" />
+        <additions>
+          <include Id="bd70f91b-083b-4843-b66a-642da4d41d02">
+            <useCaseMoniker Id="92b2a53f-a386-4c59-97e7-07748708919d" LastKnownName="Verificar Login" />
+            <elementDefinition Id="469900e3-6bfb-4101-b241-60dfd685bc8a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2e675edc-600f-453d-818f-9aa901dcc922" name="Gerenciar Clientes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="67675849-b21a-4c4a-abf3-f88f85538728" />
+        <targetEnds>
+          <association Id="157e2ccc-cce4-4631-89da-bc58c47cee63" isDerived="false" sourceEndRoleName="Gerenciar Clientes" targetEndRoleName="Gerenciar Releases" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4e929e73-3a43-48f9-bf59-4b602e95df7b" LastKnownName="Gerenciar Releases" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f7874ed-6b0d-4a14-8831-81f59823956c" name="Gerenciar Clientes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c8504056-a467-4837-b662-55ae0367d3c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d3d1ac13-ab18-43fa-8f26-d916e791f546" name="Gerenciar Releases" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="764f69a8-a4a8-4225-b452-9a828b6d8afc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="07fe5b2a-e024-42b3-808f-f7b4113db54e" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="86144c26-e36e-4aaf-94ac-92a17c0a92f6">
+            <useCaseMoniker Id="92b2a53f-a386-4c59-97e7-07748708919d" LastKnownName="Verificar Login" />
+            <elementDefinition Id="e4b231df-1e66-47d9-b1db-974d9a4891bb" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="92b2a53f-a386-4c59-97e7-07748708919d" name="Verificar Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3e4117d-de9b-4006-9376-e334fa823d7a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="996b7d3c-82ed-401b-a85d-cb354f48adb6" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e1761e2d-d686-4f58-9241-459be9d83880">
+        <profileInstance Id="e056f003-cfdb-4ed4-96aa-33fec793ecf8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="76720e39-6fbd-4022-92b1-c30ffaa016ae">
+        <profileInstance Id="22492b58-46b6-4051-bc0e-1e03fe338690" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="b777dfe6-c322-49f2-ac9a-7747d0d3b9ff" name="GerenciarReleases" linkedPackageId="996b7d3c-82ed-401b-a85d-cb354f48adb6" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="6767edf8-d652-4de7-bf1b-488e73ac2c0e" name="Gerente de Conteúdo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="77285e98-b292-4a84-811e-9f0b5f0cf669" />
+        <targetEnds>
+          <association Id="38887cc5-d3fb-47fd-a8bb-0f8921cc3b6b" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Gerenciar Empresas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2e675edc-600f-453d-818f-9aa901dcc922" LastKnownName="Gerenciar Clientes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="de75e001-592d-497a-a7f8-b0b022f10abe" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0709815d-5dc2-4af6-8c9c-804467fbbba0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac804694-7d1f-4d1a-8b0b-1e9d08afde08" name="Gerenciar Empresas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8adcc4d-bff5-49a7-a270-6c6ba27a2066" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0bb56dfd-ef66-472b-b1a5-176a93e78dda" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4e929e73-3a43-48f9-bf59-4b602e95df7b" name="Gerenciar Releases" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b578b295-386e-463d-8740-bfa834082d5a" />
+        <additions>
+          <include Id="bd70f91b-083b-4843-b66a-642da4d41d02">
+            <useCaseMoniker Id="92b2a53f-a386-4c59-97e7-07748708919d" LastKnownName="Verificar Login" />
+            <elementDefinition Id="469900e3-6bfb-4101-b241-60dfd685bc8a" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2e675edc-600f-453d-818f-9aa901dcc922" name="Gerenciar Clientes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="67675849-b21a-4c4a-abf3-f88f85538728" />
+        <targetEnds>
+          <association Id="157e2ccc-cce4-4631-89da-bc58c47cee63" isDerived="false" sourceEndRoleName="Gerenciar Clientes" targetEndRoleName="Gerenciar Releases" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4e929e73-3a43-48f9-bf59-4b602e95df7b" LastKnownName="Gerenciar Releases" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f7874ed-6b0d-4a14-8831-81f59823956c" name="Gerenciar Clientes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c8504056-a467-4837-b662-55ae0367d3c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d3d1ac13-ab18-43fa-8f26-d916e791f546" name="Gerenciar Releases" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="764f69a8-a4a8-4225-b452-9a828b6d8afc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="07fe5b2a-e024-42b3-808f-f7b4113db54e" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="86144c26-e36e-4aaf-94ac-92a17c0a92f6">
+            <useCaseMoniker Id="92b2a53f-a386-4c59-97e7-07748708919d" LastKnownName="Verificar Login" />
+            <elementDefinition Id="e4b231df-1e66-47d9-b1db-974d9a4891bb" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="92b2a53f-a386-4c59-97e7-07748708919d" name="Verificar Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3e4117d-de9b-4006-9376-e334fa823d7a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="996b7d3c-82ed-401b-a85d-cb354f48adb6" name="EXEMPLO ACCESSO">
+    <elementDefinition Id="98694b5d-3683-4780-8998-914552273693" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e1761e2d-d686-4f58-9241-459be9d83880">
+        <profileInstance Id="e056f003-cfdb-4ed4-96aa-33fec793ecf8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="76720e39-6fbd-4022-92b1-c30ffaa016ae">
+        <profileInstance Id="22492b58-46b6-4051-bc0e-1e03fe338690" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+>>>>>>> origin/master
+</useCaseModelRoot>

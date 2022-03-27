@@ -1,0 +1,33 @@
+#dainf {font-size: 50pt;
+background-image: url("utfpr.png");
+background-repeat: no-repeat;
+background-size: 100px;
+background-position: 1000px;
+}
+
+#verde {background-color: green;}
+
+#dois {background-image: 100px;
+	height: 50px;
+}
+
+#tres {background-size: 100%;
+	background-color: blue;
+	font-size: 40pt}
+
+#quatro {background-color: red;
+	font-size: 25pt}
+
+#cinco {background-color: blue;
+	}
+
+#docentes {
+	margin-left: -85px;
+}
+
+#seis {font-size: 25pt;
+	background-color: grey}
+
+#sete {font-size: 50pt}
+
+#oito {padding-left: 50px}

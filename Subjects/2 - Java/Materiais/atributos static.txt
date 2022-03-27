@@ -1,0 +1,14 @@
+Static
+
+  -    private
+  +    public
+  #    protected
+       package
+_____  static
+
+
+
+Um metodo estatico(static) so pode chamar outros metodos e atributos estatico.
+
+sobrecarga
+reescrita

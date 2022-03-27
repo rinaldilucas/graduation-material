@@ -1,0 +1,51 @@
+JSF
+Jsf é um freamwork que trabalha atuando como uma interface para o sistema web, fazendo abstrações de componentes e conectando os em Java seguindo o modelo MVC.
+CONTROLLER
+O controlador é quem define o comportamento da aplicação em si. Ele interpreta as ações do usuário e mapeia para o modelo. Em jsf, ele é o responsável em renderizar determinada visualização baseada em todo o processamento da interface e o modelo.
+Expression Language
+Componentes de UI
+Renderers
+Managed beans
+Validators
+Converters
+Eventos e listeners
+Navigation
+1
+Expression language é um componente que faz com que seja possivel criar expressoes para manipular os dados da aplicação, até os componentes em JavaBeans. 
+2
+O jsf possui a funcionalidade de criar componentes Web a partir de bibliotecas de interfaces, podendo ser usado de diversas formas, facilitando a transmissão de dados entre os componentes.
+3
+Render é um componente usado quando se deseja renderizar algo (um form por exemplo) quando determinada condição for alcançada.
+4
+Os managedBean você provavelmente os viu no jsf que é um framework mvc.
+A função do managebean é estar intermediando entre a página e o seu modelo
+Por exemplo você quer colocar em jsf uma lista com informações que venham do seu banco de dados.
+Na sua página você chama o código dessa maneira
+O managed beam é um componente que é o mediador da página e do modelo. Esse modelo possui diversas ferramentes que facilitam o gerenciamento e monitoramentos de objetos e aplicações, utilizando o conceito de agentes.
+5
+O jsf possui o componente de validação pra facilitar a vida do programador. Existem tags padrões já definidas, como validar tamanho de string e também é possível criar tags personalizadas.
+6
+Jsf possui um conversor que coleta os dados do tipo texto (padrão web) e converte para o padrão desejado. Um exemplo seria converter uma data (que vem da web em formato texto) para uma data formatada: 99/99/9999.
+7
+Quando se clica em um botão ou link, o jsf ativa gatilhos (listeners) que dispiaram determinadas ações que terão de ser explicitas pelo desenvolvedor.-lo para um lis de eventos]
+8
+Jsf possui um esquema de navegação que torna possível impor regras (em um arquilo xml) de navegação.
+
+ <h:body>
+        <h:form>
+            <label>Digite a cidade a adicionar: </label>
+            <h:inputText binding="#{input1}" />
+            <br/><br/>
+            <h:dataTable value="#{cidades.all}" var="test">
+                <h:column>
+                    <h:outputText value="#{test.id}" />
+                    <h:outputText value="#{test.nome}" />
+                </h:column>                                
+            </h:dataTable>            
+               <h:column>
+                   <h:commandButton value="Adicionar" action="#{cidades.adicionar(input1.value)}"/> 
+                </h:column>
+            <br/>           
+        </h:form>  
+    </h:body>
+

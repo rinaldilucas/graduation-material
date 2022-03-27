@@ -1,0 +1,15 @@
+Requisitos: Condicao que se deve satisfacer para alcancar certo fim; Caracteristica do sistema; O que pode ser feito e o que não deve ser feito.
+
+Elicitacao = identificar
+Especificacao = escrever
+
+
+Motivacão:
+
+-Requisitos funcionais
+-Requisitos nao funcionais: amigabilidade.
+-Requisitos de dominio: requisitos que deve ser atentidos.
+
+Engenharia de requisitos.
+
+

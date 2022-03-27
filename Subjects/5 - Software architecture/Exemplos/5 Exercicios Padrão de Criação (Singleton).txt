@@ -1,0 +1,46 @@
+1 Qual a intenção do uso do Padrão Singleton ?
+
+O Padrão de criação Singleton tem como objetivo garantir que uma classe tenha apenas uma instância, e que ela mesmo controle tenha o controle e forneça um ponto de conexão para as outras classes.
+
+2 Qual a estrutura de um Singleton ?
+
+O singleton deve possuir uma classe com o nome usado, um construtor estático e privado com o mesmo nome da Classe, um atributo privado de mesmo tipo do nome da classe e um método estático que retorne o atributo privado (a instância). Nesse método, se a instância existir, ele cria uma e devolve. Caso exista, ele apenas retorna a instância.
+
+3 Quais as vantagens do padrão Singleton ?
+
+O padrão Singleton torna o acesso a instância controlado. Caso por alguma necessidade seja necessário outra instância, a classe Singleton pode alterar e gerenciar o número de instâncias.
+
+
+4
+
+public class ConectionSingleton{
+
+   private Connection conexao;
+   private string url = url de conexao;
+   private string user = usuario;
+   private static ConnectionSingleton instancia;
+
+private ConnectionSingleton(){
+   try{
+      Class.forname("driver");
+      showMessage(null, "Driver ok");
+   } catch(exception){
+      showMessageDialog(null,"Sem driver");
+   }
+   try{
+    this.conexao = driver.getConnection(url, user, senha);
+    showMessageDialog(null, "conexão ok");
+   }catch (Exception)
+    showMessageDialog(null, "BATATA sem conexao BATATA");
+   }
+}
+
+public static ConnectionSingleton getInstancia(){
+   if(instancia=null){
+      instancia = new ConnectionSingleton();
+   return insancia
+}
+
+public Connection getConexao(){  
+   return this.conexao;
+}

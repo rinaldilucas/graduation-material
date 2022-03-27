@@ -1,0 +1,52 @@
+\du
+select * from pg_user  --LISTAM USUARIOS
+
+create user lucas password '123'; --CRIA USUARIO
+drop user zag; --dropa o usuario
+
+\c --EXECUTA CONEXAO
+\c postgres lucas
+
+select user; --VERIFICA USUARIO
+
+\c visoes lucas;
+
+select * from clientes;
+
+\c visoes postgres; 
+   ^BD     ^USUARIO
+
+\dt -- LISTA AS TABELAS E SEUS RESPECTIVOS DONOS
+
+
+create database mybd;
+
+create table clientes (cod_cli int primary key, nome_cli varchar(30));
+
+insert into clientes values (1, 'Lucas');]
+
+grant select on clientes to pato;
+
+grant all privileges on clientes to lucas; --DEFINE PERMISSOES
+
+revoke all privileges on clientes from lucas; --RETIRA PERMISSAO
+
+create view testar (Nome, Valor) as (select nome, debito from clientes); --CRIA VISAO COM ALIAS
+
+grant all privileges on testar to lucas; --DAR PRIVILEGIO PARA O USUARIO ACESSAR A VIEW
+
+alter user lucas superuser createdb createrole; --DA PRIVILEGIOS PARA OS USUARIOS
+/help para saber quais os comandos
+
+
+
+create view ZAG (cpf, nomecliente) as
+select pk_cli, nome from clientes;
+
+select * from zag;
+drop view ZAG;
+
+
+permite você criar uma visao que o administrador quer que o cliente veja.
+
+consulta armazenada

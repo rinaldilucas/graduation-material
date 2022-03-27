@@ -1,0 +1,183 @@
+a = atomicidade
+c = consistencia
+i = isolamento
+d = durabilidade
+
+2 - rollback = volta todas as acoes feitas no bd e fecha a transacao
+commit = salva as alteracoes no BD e depois fecha a transacao
+
+3 = dead é uma situacao onde possui 2 transacoes ativas, A e B, onde A necessita de um recurso B e B necessita um recurso de A, fazendo com que o SGBD mate uma destas.
+
+4 - Uma visao nada mais é que um select criado e armazenado no banco de dados. Além de ser um simples select, ele é uma visao criada, podendo assim ser personalizavel, escolhendo à vontade as informacoes a serem exibidas, como ocultar o saldo de uma conta.
+
+5 - select * from produtos
+left join itens on (produtos.pk_prod = itens.fk_prod)
+where itens.fk_prod is null;
+
+select * from produtos
+left join itens on (produtos.pk_prod = itens.fk_prod)
+left join compras on (compras.pk_comp = itens.fk_comp)
+left join clientes on (clientes.pk_cli = compras.fk_cli) and clientes.pk_cli = 1
+where itens.fk_prod is null;
+
+select * from clientes
+inner join compras (clientes.pk_cli = compras.fk_cli)
+inner join itens (compras.pk_comp = itens.fk_comp)
+inner join produtos (produtos.pk_prod = itens.fk_prod) and produtos.pk_prod = 5
+
+-- Clientes que fizeram Compras 
+select * from 
+clientes inner join compras on (clientes.pk_cli = compras.fk_cli);
+
+-- Clientes e Produtos que Compraram
+select * from clientes 
+inner join compras on (clientes.pk_cli = compras.fk_cli)
+inner join itens on (compras.pk_comp = itens.fk_comp)
+inner join produtos on (produtos.pk_prod = itens.fk_prod);
+
+-- Clientes que Compraram o Produto com código = 1
+select * from clientes 
+inner join compras on (clientes.pk_cli = compras.fk_cli)
+inner join itens on (compras.pk_comp = itens.fk_comp)
+inner join produtos on (produtos.pk_prod = itens.fk_prod)
+where produtos.pk_prod=1;
+
+-- Todos produtos comprados pelo Cliente com código = 1
+select * from produtos 
+inner join itens on (produtos.pk_prod = itens.fk_prod)
+inner join compras on (compras.pk_comp = itens.fk_comp)
+inner join clientes on (clientes.pk_cli = compras.fk_cli)
+where clientes.pk_cli = 1;
+
+-- Totalizando por Itens comprados - função agregada sum()- os valores das compras Nomes dos Clientes, dos Produtos e as Datas da compra e Numero da Nota (pk_comp)
+
+select compras.pk_comp, clientes.nome, produtos.descr, compras.datacomp, itens.valor_item, itens.qtd_item, sum(itens.valor_item)  from clientes 
+inner join compras on (clientes.pk_cli = compras.fk_cli)
+inner join itens on (compras.pk_comp = itens.fk_comp)
+inner join produtos on (produtos.pk_prod = itens.fk_prod)
+group by compras.pk_comp, clientes.nome, produtos.descr, compras.datacomp, compras.pk_comp, itens.valor_item, itens.qtd_item
+order by pk_comp;
+
+-- Todos produtos NUNCA comprados pelo Cliente com código = 1
+select * from clientes
+inner join compras on (clientes.pk_cli=compras.fk_cli)
+inner join itens on (compras.pk_comp = itens.fk_comp)
+right join produtos on (produtos.pk_prod = itens.fk_prod) and 
+clientes.pk_cli=4 where itens.fk_prod is null
+order by pk_prod asc;
+
+-- Clientes que nunca compraram
+select * from clientes
+left join compras on (clientes.pk_cli = compras.fk_cli)
+where compras.fk_cli is null;
+
+-- Produtos que nunca foram vendidos
+select * from produtos 
+left join itens on (produtos.pk_prod = itens.fk_prod)
+where itens.fk_prod is null;
+
+-- Produtos comprados por determinado Cliente
+select * from produtos
+inner join itens on (produtos.pk_prod = itens.fk_prod)
+inner join compras on (itens.fk_comp = compras.pk_comp)
+inner join clientes on (compras.fk_cli = clientes.pk_cli) where clientes.nome = 'José'
+
+-- Clientes que compraram determinado Produto
+select * from clientes
+inner join compras on (clientes.pk_cli = compras.fk_cli)
+inner join itens on (compras.pk_comp = itens.fk_comp)
+inner join produtos on (itens.fk_prod = produtos.pk_prod) 
+where produtos.descr = 'Feijão'
+order by pk_prod asc;
+
+--Clientes que Compraram o Produto com código = 1
+select * from clientes 
+inner join compras on (clientes.pk_cli = compras.fk_cli)
+inner join itens on (compras.pk_comp = itens.fk_comp)
+inner join produtos on (produtos.pk_prod = itens.fk_prod)
+where produtos.pk_prod=1;
+
+-------------------
+
+\du
+select * from pg_user  --LISTAM USUARIOS
+
+create user lucas password '123'; --CRIA USUARIO
+drop user zag; --dropa o usuario
+
+\c --EXECUTA CONEXAO
+\c postgres lucas
+
+select user; --VERIFICA USUARIO
+
+\c visoes lucas;
+
+select * from clientes;
+
+\c visoes postgres; 
+   ^BD     ^USUARIO
+
+\dt -- LISTA AS TABELAS E SEUS RESPECTIVOS DONOS
+
+
+create database mybd;
+
+create table clientes (cod_cli int primary key, nome_cli varchar(30));
+
+insert into clientes values (1, 'Lucas');]
+
+grant select on clientes to pato;
+
+grant all privileges on clientes to lucas; --DEFINE PERMISSOES
+
+revoke all privileges on clientes from lucas; --RETIRA PERMISSAO
+
+create view testar (Nome, Valor) as (select nome, debito from clientes); --CRIA VISAO COM ALIAS
+
+grant all privileges on testar to lucas; --DAR PRIVILEGIO PARA O USUARIO ACESSAR A VIEW
+
+alter user lucas superuser createdb createrole; --DA PRIVILEGIOS PARA OS USUARIOS
+/help para saber quais os comandos
+
+
+
+create view ZAG (cpf, nomecliente) as
+select pk_cli, nome from clientes;
+
+select * from zag;
+drop view ZAG;
+
+
+permite você criar uma visao que o administrador quer que o cliente veja.
+
+consulta armazenada
+
+-------------------------------------------------------------------
+
+create table tb_lock (
+	cod int primary key,
+	nome varchar (30)
+);
+
+insert into tb_lock values (1, 'Lucas');
+insert into tb_lock values (2, 'Joao');
+insert into tb_lock values (3, 'Rubem');
+insert into tb_lock values (4, 'Jorge');
+
+select * from tb_lock;
+
+sp_lock 53;
+
+select @@TRANCOUNT
+commit
+rollback
+begin transaction
+update tb_lock set nome = 'qqqqqqq2qqq' where cod = 1;
+commit
+
+-----------------
+
+begin transaction
+select * from tb_lock
+select @@TRANCOUNT
+rollback

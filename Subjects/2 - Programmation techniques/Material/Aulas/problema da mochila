@@ -1,0 +1,17 @@
+/*
+m[i, w] = valor da melhor mochila de capacidade w utilizando os itens de 1 ate i
+m[i, W] =|→ m[i-1, W] se  Wi > W
+			|→ max |→ m[i-1, W],
+			 		 |→ m[i-1, W-Wi] + Vi 
+			 		 
+			 		 
+			 		 m[0, W] = 0  para todo w
+			 		 m[i, 0] = 0  para todo i
+*/
+mochila W = 4
+
+(v1 = 2, w1 = 3)
+(v2 = 7, w2 = 1)	
+(v3 = 5, w3 = 4)
+(v4 = 2, w4 = 6)
+

@@ -1,0 +1,113 @@
+Aluno: { numAlunoPK, nome, endereco, cidade, telefone, numCursoFK(Curso.numCurso) }
+
+Disciplina: { numDiscipPK, nome, quantcreditos }
+
+Professor: { numFuncPK, nome, admissao, areapesquisa }
+
+Curso: { numCursoPK, nome, totalcréditos }
+
+Aula: { (numAlunoFK(Aluno.numAluno), numDiscipFK(Disciplina.numDiscip), numFuncFK(Professor.numFunc), semestre)PK, nota }
+
+DiscipCurso: {(numDiscipFK(Disciplina.numDiscip), numCursoFK(Curso.numCurso))PK }
+
+
+---------------------------------------------------------------------------
+
+
+
+create database universidade;
+
+use universidade;
+
+-- criando tabelas
+create table aluno (
+numAlunoPK int not null,
+nome varchar(20) not null,
+endereco varchar(50),
+cidade varchar(20),
+telefone int,
+numCursoFK int not null
+);
+
+create table disciplina (
+numDiscipPK int not null,
+nome varchar(20) not null,
+quantCreditos int
+);
+
+create table professor (
+numFuncPK int not null,
+nome varchar(20) not null,
+admissao date not null,
+areaPesquisa varchar(50) not null
+);
+
+create table curso (
+numCursoPK int not null,
+nome varchar(20) not null,
+totalCreditos int
+);
+
+create table aula (
+numAlunoFK int not null,
+numDiscipFK int not null,
+numFuncFK int not null,
+semestre int not null,
+nota float not null
+);
+
+create table discipCurso (
+numDiscipFK int not null,
+numCursoFK int not null
+);
+
+-- criando chaves primarias
+alter table aluno
+add primary key (numAlunoPK);
+
+alter table disciplina
+add primary key (numDiscipPK);
+
+alter table professor
+add primary key (numFuncPK);
+
+alter table curso
+add primary key (numCursoPK);
+
+alter table aula
+add primary key (numAlunoFK, numDiscipFK, numFuncFK, semestre);
+
+alter table discipCurso
+add primary key (numDiscipFK, numCursoFK);
+
+-- criando chaves estrangeiras
+
+alter table aluno
+add constraint CursoComAluno
+foreign key (numCursoFK)
+references curso (numCursoPK);
+
+alter table aula
+add constraint AlunoComAula
+foreign key (numAlunoFK)
+references aluno (numAlunoPK);
+
+alter table aula
+add constraint DiscipComAula
+foreign key (numDiscipFK)
+references disciplina (numDiscipPK);
+
+alter table aula
+add constraint ProfessComAula
+foreign key (numFuncFK)
+references professor (numFuncPK);
+
+alter table discipCurso
+add constraint DiscipComDiscipCurso
+foreign key (numDiscipFK)
+references disciplina (numDiscipPK);
+
+alter table discipCurso
+add constraint CursoComDiscipCurso
+foreign key (numCursoFK)
+references curso (numCursoPK);

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulários</title>
+    </head>
+    <body>
+        <h1>formulários</h1>
+        <form action="formulario.html" method="POST">
+            <fieldset>
+                <legend>Campos INPUT</legend>
+                
+                <!-- Input de Texto -->
+                <div>
+                    <label for="campoNome">Nome:</label>
+                    <input type="text" id="campoNome" name="nome" maxlength="10" size="20" placeholder="Informe seu nome">
+                </div>
+
+                <!-- Input de Senha -->
+                <div>
+                    <label for="campoSenha">Senha:</label>
+                    <input type="password" id="campoSenha" name="senha">
+                </div>
+
+                <!-- Input de Multipla resposta -->
+                <div>
+                    <span class="label">Áreas de interesse:</span>
+                    
+                    <input type="checkbox" id="a1" name="area[]" value="programacao">
+                    <label for="a1">Programação</label>
+
+                    
+                    <input type="checkbox" id="a2" name="area[]" value="banco">
+                    <label for="a2">Banco de dados</label>
+
+                    <!-- Modo alternativo -->
+                    <label><input type="checkbox" name="area[]" value="rede"> Redes</label>
+                </div>
+
+
+                <!-- Input de Multipla escolha -->
+                <div>
+                    <span class="label">Sexo:</span>
+                    
+                    <input type="radio" id="s1" name="sexo" value="M">
+                    <label for="s1">Masculino</label>
+                    
+                    <input type="radio" id="s2" name="sexo" value="F">
+                    <label for="s2">Feminino</label>
+                </div>
+
+                <!-- Campo oculto -->
+                <input type="hidden" name="codigo" value="12">
+
+                <!-- Botoes -->
+                <div>
+                    <input type="button" value="Simples botao">
+                    <input type="reset" value="Limpar opções do formulário">
+                    <input type="submit" value="Enviar formulário">
+                </div>
+
+                <!-- Novos inputs -->
+                <div>
+                    <label> Busca: <input type="search"> </label>
+                </div>
+                <div>
+                    <label> Números: <input type="number"></label>
+                </div>
+                <div>
+                    <label>Slider: <input type="range"></label>
+                </div>
+                <div>
+                    <label>Cor: <input type="color"></label>
+                </div>
+                <div>
+                    <label>Telefone: <input type="tel"></label>
+                </div>
+                <div>
+                    <label>URL: <input type="url"></label>
+                </div>
+                <div>
+                    <label>E-mail: <input type="email"></label>
+                </div>
+                <div>
+                    <label>Data: <input type="date"></label>
+                </div>
+                <div>
+                    <label>Mes: <input type="month"></label>
+                </div>
+                <div>
+                    <label> Semana: <input type="week"></label>
+                </div>
+                <div>
+                    <label>Hora: <input type="time"></label>
+                </div>
+                <div>
+                    <label>Data e hora: <input type="datetime"></label>
+                </div>
+                <div>
+                    <label>Data e hora local: <input type="datetime-local"></label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Caixa de Seleção</legend>
+
+                <!-- Caixa de seleção - simples -->
+                <div>
+                    <label for="estadosul">Estado do sul:</label>
+                    <select id="estadosul" size="1" name="estadosul">
+                        <option></option>
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS" selected>Rio Grande do Sul</option>
+                    </select>
+                </div>
+
+                <!-- Caixa de seleção - exibindo mais de um valor -->
+                <div>
+                    <label for="estadosud1">Estados do sudeste:</label>
+                    <select id="estadosud1" size="4" name="estadosud1">
+                        <option value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </select>
+                </div>
+
+                <!-- Caixa de seleção - selecionando mais de um valor -->
+                <div>
+                    <label for="estadosud2">Estados do sudeste 2:</label>
+                    <select id="estadosud2" size="4" name="estadosud2" multiple>
+                        <option value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </select>
+                </div>
+
+                <!-- Caixa de seleção - Organizando em grupos -->
+                <div>
+                    <label for="estado">Estado:</label>
+                    <select id="estado" size="1" name="estado">
+                        <optgroup label="Região Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                        <optgroup label="Região Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Caixa de texto</legend>
+
+                <div>
+                    <label for="coment">Comentário:</label>
+                    <textarea id="coment" cols="50" rows="6" name="coment">Valor que aparecerá na
+                     caixa de texto</textarea>
+                </div>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Botões</legend>
+
+                <div>
+                    <button type="button">Não faz nada</button>
+                    <button type="reset">Limpa o formulário</button>
+                    <button type="submit"><mark>Envia os dados</mark></button>
+                </div>
+
+            </fieldset>
+        </form>
+    </body>
+</html>

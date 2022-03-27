@@ -1,0 +1,68 @@
+Pesquisa
+
+Pesquisador:
+
+RGPK, Nome, Telefone, Titulação
+
+
+Projeto:
+
+NomePK, descrição, Tempo_duração
+
+
+
+Equipamento:
+
+Num_SeriePK, Data, Preço
+
+
+
+Computador:
+
+Processador, Memoria, Placas
+
+
+Impressora:
+
+Tipo_impressão, Custo_Impressão
+
+
+Scanner:
+
+Resolução, Vel_Digitação
+
+
+
+
+Mapeamento Relacionamento
+
+
+pesquisador N---<>---N Projeto
+
+Pesquisador: RGPK, Nome, Telefone, Titulação
+Projeto: RGPesquisadorFK, NomePK, descrição, Tempo_duração
+
+
+Projeto  1---<>---N Equipamento
+
+Projeto: NomePK, descrição, Tempo_duração
+Equipamento: NomeFK, Num_SeriePK, Data, Preço
+
+
+
+Mapeamento Generalização
+
+
+Equipamento:
+
+Num_SeriePK, Data, Preço
+
+
+
+Computador: Num_SerieFKPK, Processador, Memoria, Placas
+
+
+Impressora: Num_SerieFKPK, Tipo_impressão, Custo_Impressão
+
+
+Scanner: Num_SerieFKPK, Resolução, Vel_Digitação

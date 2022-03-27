@@ -1,0 +1,110 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="VisaoGlobal">
+  <useCaseModelRootMoniker Id="0a3403bc-845b-4f9d-85cb-9c9628445f39" />
+  <nestedChildShapes>
+    <actorShape Id="8b7cc473-7ffe-49c9-896b-73f134ef5592" absoluteBounds="1.5, 2, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="09938649-622d-4420-8b30-4ae2c7f0455a" LastKnownName="Gerente de Conteúdo" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" absoluteBounds="2.625, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="da2951ff-cb8d-427c-9c89-75a4740dffe9" LastKnownName="Gerenciar Clientes" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2 : 2.25); (2.625 : 2.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="9002ffa4-e1e9-4080-bcb2-245c0e3f9fa3" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="8b7cc473-7ffe-49c9-896b-73f134ef5592" />
+        <useCaseShapeMoniker Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="6a4e94f2-ad66-41c7-961d-e256ad2dd9be" absoluteBounds="5, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="7341bafa-8458-416b-ade3-7d1aa8f401ca" LastKnownName="Gerenciar Releases" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.625 : 2.25); (5 : 2.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="29f06bcf-6f4e-40c5-9c66-49d5fb9a2af2" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" />
+        <useCaseShapeMoniker Id="6a4e94f2-ad66-41c7-961d-e256ad2dd9be" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="9502eba5-d766-4c5d-bd81-26ec8990da15" absoluteBounds="3.875, 3.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="35ef45a2-0329-4689-bf58-8cf94c207b52" LastKnownName="Verificar Login" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(3.14186679924764 : 2.49985771505156); (4.15383700129007 : 3.52578641432686)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="9dadb2e3-9557-4755-a3e4-5c53809dbf84" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" />
+        <useCaseShapeMoniker Id="9502eba5-d766-4c5d-bd81-26ec8990da15" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(5.43703263976761 : 2.49800963264829); (4.57023407153866 : 3.51984589004841)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="02d9f7eb-a452-4303-a6a0-1ee1561a05ac" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6a4e94f2-ad66-41c7-961d-e256ad2dd9be" />
+        <useCaseShapeMoniker Id="9502eba5-d766-4c5d-bd81-26ec8990da15" />
+      </nodes>
+    </includeConnector>
+  </nestedChildShapes>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="VisaoGlobal">
+  <useCaseModelRootMoniker Id="0a3403bc-845b-4f9d-85cb-9c9628445f39" />
+  <nestedChildShapes>
+    <actorShape Id="8b7cc473-7ffe-49c9-896b-73f134ef5592" absoluteBounds="1.5, 2, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="09938649-622d-4420-8b30-4ae2c7f0455a" LastKnownName="Gerente de Conteúdo" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" absoluteBounds="2.625, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="da2951ff-cb8d-427c-9c89-75a4740dffe9" LastKnownName="Gerenciar Clientes" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2 : 2.25); (2.625 : 2.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="9002ffa4-e1e9-4080-bcb2-245c0e3f9fa3" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="8b7cc473-7ffe-49c9-896b-73f134ef5592" />
+        <useCaseShapeMoniker Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="6a4e94f2-ad66-41c7-961d-e256ad2dd9be" absoluteBounds="5, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="7341bafa-8458-416b-ade3-7d1aa8f401ca" LastKnownName="Gerenciar Releases" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3.625 : 2.25); (5 : 2.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="29f06bcf-6f4e-40c5-9c66-49d5fb9a2af2" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" />
+        <useCaseShapeMoniker Id="6a4e94f2-ad66-41c7-961d-e256ad2dd9be" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="9502eba5-d766-4c5d-bd81-26ec8990da15" absoluteBounds="3.875, 3.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="35ef45a2-0329-4689-bf58-8cf94c207b52" LastKnownName="Verificar Login" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(3.14186679924764 : 2.49985771505156); (4.15383700129007 : 3.52578641432686)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="9dadb2e3-9557-4755-a3e4-5c53809dbf84" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="3ccd27fb-01b5-4bfc-9c4d-2895ca17327a" />
+        <useCaseShapeMoniker Id="9502eba5-d766-4c5d-bd81-26ec8990da15" />
+      </nodes>
+    </includeConnector>
+    <includeConnector edgePoints="[(5.43703263976761 : 2.49800963264829); (4.57023407153866 : 3.51984589004841)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="Black" useCaseStereotype="«include»">
+      <includeMoniker Id="02d9f7eb-a452-4303-a6a0-1ee1561a05ac" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="6a4e94f2-ad66-41c7-961d-e256ad2dd9be" />
+        <useCaseShapeMoniker Id="9502eba5-d766-4c5d-bd81-26ec8990da15" />
+      </nodes>
+    </includeConnector>
+  </nestedChildShapes>
+>>>>>>> origin/master
+</useCaseDiagram>

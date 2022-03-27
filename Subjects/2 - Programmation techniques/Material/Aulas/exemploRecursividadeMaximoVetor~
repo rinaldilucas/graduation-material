@@ -1,0 +1,17 @@
+/*exemplo de recursividade:
+Maximo do vetor */
+
+v: [ 3 , 8 , 1 , 7 ]
+	  0   1   2   3
+	 
+	 
+maximo (v, 0, 3) = 8
+	| q  <- (0 + 3)/2 = 1
+	| solEsq <- maximo (v, 0, 1) = 8
+	|	| q <- (0 + 1)/2 = 0
+	|	| solEsq <- maximo (v, 0, 0) = 3
+	|	| solDir <- maximo (v, 1, 1) = 8
+	| solDir <- maximo (v, 2, 3) = 7
+	|	| q <- (2 + 3)/2 = 2
+	|	| solEsq <- maximo (v, 2, 2) = 1
+	|	| solDir <- maximo (v, 3, 3) = 7

@@ -1,0 +1,76 @@
+criterios para determinar qual processo ira usar o processador;
+os criterios utilizados compoem as politica de escalonamento, que é a base da gerencia do processador;
+escalonamente = pronto para execução.
+*qualquer um pode ter acesso (pois estao prontos, porem há uma selecao, criterios, qual será o proximo?)
+-manter processador ocupado, balancear uso cpu/thread, maximizar throughput, privilegiar os criticos, oferecer tempo razoavel de resposta
+
+a rotina do sistema que tem a funcao de implementar as politicas de escalonamento = scheduler (escalonador), fundamental para o processador.
+
+dispatcher é o responsavel pela troca de contexto apos o escalonador determinar o processo escolhido.
+
+CRITERIOS:
+
+dependendo de cada so pode variar os criterios de escalonamento (sistema de tempo compartilhado exige que todos sejam tratados iguais, e de tempo real deve priorizar os processos criticos.)
+
+UTILIZACAO DE PROCESSADOR:
+deve permanecer ocupado pela maior parte de seu tempo
+
+throughput:
+representa o numero de processos executados em uma determinado intervalo de tempo. MAIOR = MELHOR
+
+TEMPO processador/cpu
+é o tempo que processo leva no tempo de execucao. a politica de escalonamento nao interfere, sendo esse tempo apenas do cod da aplicacao e das entradads de dados
+
+tempo de espera:
+tempo total que o processo permanece na fila de PRONTO. MENOR = MELHOR
+
+tempo de turnaround:
+tempo de vida do processo, desde a inicializacao (aloca informacao da memoria) até a hr do seu termino
+t
+tempo de resposta:
+tempo entre a requisicao ao sistema ou aplicacao e o instante que a resposta é exibida.
+(tempo de teclar e ver a resposta no monitor), geralmente a resposta depende da velocidade de dispositivo e/s.
+
+ESCALONAMENTOS:
+
+
+preempcao = quando o so encerra um processo e inicia outro
+
+nao preemptivo:
+nenhum evento externo faz com que ele perca o uso do processador por um processo em execucao. só sai do estado de execucao caso termine seu processamento ou execute as instrucoes do proprio cod que façam ele entrar em espera.
+
+preemptivo:
+é caracterizado pela possibilidade do so interromper um processo em execucao e passa-lo para estado de pronto, com obj de alocar outro processo na CPU.
+
+FIFO:
+first in first out
+
+shortest job first:
+executa o que tem menor tempo de processador, ordenando a fila de espera pelos processos que tem o menor tempo da cpu
+
+coperativo:
+o proprio processo cede a vez para outro processo a fim de uma melhor distribuicao de uso no processador (mas possui uma serie de problemas)
+
+circular:
+preemptivo para SO de tempo compartilhado, semelhante ao FIFO, mas tem um tempo limite de tempo (chamado de fatia de tempo) ou QUANTUM, se caso o tempo for alcançado, o processo vai ao final da fila, e outro processo entra (em forma de fila)
+
+prioridades:
+preemptivo, realizado baseado em um valor associado aos processos chamado prioridade de execucao.
+o processo será sempre o com mais prioridade. se caso as prioridades forem iguais, o metodo usado será o fifo. nao há timeslice, e nao há parada de processos por meio de tempo. quando um processo de maior prioridade aparece, o atual é pausado, salvo seus dados e lançado na fila.
+
+circular com prioridade:
+processo fica em execucao até que termine, e voluntarimente passe de execucao para pronto, ou sofra uma preempcao por tempo ou prioridade (indo pro fim da fila)
+
+escalonamento por ultimas filas:
+diversas filas em pronto, cada qual com sua prioridade. associados as filas em funcao das caracteristicas proprias, podendo usar varios metodos: uma fila usa fifo, outra usa prioridade, uma pelo mais rapido, podendo ser possivel ver um criterio para o uso
+
+POLITICA DE ESCALONAMENTO EM SISTEMA DE TEMPO COMPARITLHADO STC
+geralmente, STC caracterizam pela interatividade, exigindo tempo de resposta baixos
+a escolha de uma politica pra esse proposito deve ter um compartilhamento d recursos equitativo.
+--
+um nrefinamento no balanceamento pode ser obtido pelo ESCALONAMENTO CIRCULAR COM PRIORIDADE DINAMICAS.
+Com isso é possivel o adm do sistema alterar a prioridade do processo, ou por ser muito usado, ou por pouco
+
+POLITICA DE ESCALONAMENTO EM SISTEMA DE TEMPO REAL
+diferente da anterior, algumas app especificas exigem respostas imediatas p/ execucao das tarefas, nesse caso é necessario serem feitos nesse tipo de politica, onde é garantida a execucao dos processos dentro de limites rigidos de tempo. (trafego area, bem industrial, controle de produção)
+deve-se levar a importancia relativa de cada tarefa da aplicacao, em funcao disso, o escalonamento por prioridade é o mais adequado, já que para cada processo uma proridade é associada em funcao da importancia do processo da aplicacao.

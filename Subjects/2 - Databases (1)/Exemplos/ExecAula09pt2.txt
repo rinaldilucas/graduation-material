@@ -1,0 +1,56 @@
+select curso.nome, disciplina.nome from curso, disciplina, discipCurso
+where 
+curso.numCursoPK = discipCurso.numCursoFK and 
+disciplina.numDiscipPK = discipCurso.numDiscipFK and 
+curso.nome = 'Ciência da Computação';
+
+
+select curso.nome, disciplina.nome from curso, disciplina, discipCurso
+where 
+curso.numCursoPK = discipCurso.numCursoFK and 
+disciplina.numDiscipPK = discipCurso.numDiscipFK and 
+disciplina.nome = 'Cálculo Numérico';
+
+
+select disciplina.nome, aluno.nome
+from aluno, disciplina, aula
+where
+aluno.numAlunoPK = aula.numAlunoFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+aluno.nome = 'M.J.Casanova' and
+aula.semestre = '198';
+
+
+select disciplina.nome, aluno.nome
+from aluno, disciplina, aula
+where
+aluno.numAlunoPK = aula.numAlunoFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+aluno.nome = 'A.Castro' and
+aula.nota < 6;
+
+
+select disciplina.nome, aluno.nome
+from aluno, disciplina, aula
+where
+aluno.numAlunoPK = aula.numAlunoFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+disciplina.nome = 'Cálculo Numérico' and
+aula.nota < 6 and
+aula.semestre = '198';
+
+
+select distinct disciplina.nome, professor.nome
+from disciplina, professor, aula
+where
+professor.numFuncPK = aula.numFuncFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+professor.nome = 'Ramon Travanti';
+
+
+select distinct disciplina.nome, professor.nome
+from disciplina, aula, professor
+where
+professor.numFuncPK = aula.numFuncFK and
+disciplina.numDiscipPK = aula.numDiscipFK and
+disciplina.nome = 'Banco de Dados';
