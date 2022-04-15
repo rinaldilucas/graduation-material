@@ -28,6 +28,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>       
     </li>     
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#donations">Donations</a></li>
   </ol>
 </details>
@@ -39,6 +40,19 @@
 While graduating from college, I collected classroom materials and exercises for study purposes. I separated and organized so that someday, luckily, it will help someone.
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contact
+
+[![Website](https://img.shields.io/badge/-Website-0078D4?style=flat-square&logo=html5&logoColor=white&link=https://rinaldilucas.com)](https://rinaldilucas.com)
+[![Github](https://img.shields.io/badge/-Github-967bb5?style=flat-square&labelColor=967bb5&logo=github&logoColor=white&link=https://github.com/rinaldilucas
+)](https://github.com/rinaldilucas)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:lucasreinaldi@gmail.com)](mailto:lucasreinaldi@gmail.com)
+[![Hotmail Badge](https://img.shields.io/badge/-Hotmail-0078D4?style=flat-square&logo=microsoft-outlook&logoColor=white&link=mailto:lucasreinaldi@hotmail.com)](mailto:lucasreinaldi@hotmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rinaldilucas/)](https://www.linkedin.com/in/rinaldilucas/)
+[![Telegram Badge](https://img.shields.io/badge/-Telegram-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=telegram&logoColor=white&link=https://t.me/rinaldilucas)](https://t.me/rinaldilucas)
+
+Project Link: [https://github.com/rinaldilucas/graduation-material](https://github.com/rinaldilucas/less-template)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
