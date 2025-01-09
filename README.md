@@ -12,7 +12,7 @@
   <h3 align="center">Graduation Material</h3>
 
   <p align="center">
-    Personal graduation material from Federal Technological University of Northern Paraná.
+    Personal graduation material from the Federal Technological University of Northern Paraná.
     <br />
     <a href="https://github.com/rinaldilucas/graduation-material"><strong>Explore the docs »</strong></a>
     <br />
@@ -61,7 +61,7 @@ Project Link: [https://github.com/rinaldilucas/graduation-material](https://gith
 ## Donations
 
 If you feel that this project has helped you in any way, whether it's attracting clients or teaching you about the technologies used, feel free to make a donation.
-It helps me a lot to continue developing open source codes.
+It helps me a lot to continue developing open-source codes.
 
 -   Metamask (USDT):
     ```sh
